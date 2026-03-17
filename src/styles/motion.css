@@ -1,0 +1,356 @@
+/**
+ * Global Motion System - CSS Animations & Transitions
+ * Premium, smooth, controlled motion throughout the site
+ */
+
+/* ===================================
+   BASE TRANSITIONS
+   =================================== */
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a, button {
+  transition-duration: 0.25s;
+  transition-property: transform, background-color, border-color, box-shadow, opacity;
+}
+
+/* ===================================
+   ENTRANCE ANIMATIONS
+   =================================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===================================
+   HOVER EFFECTS
+   =================================== */
+@keyframes hoverLift {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@keyframes pressScale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.98);
+  }
+}
+
+/* ===================================
+   FLOATING ANIMATION
+   =================================== */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* ===================================
+   BACKGROUND ANIMATIONS
+   =================================== */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* ===================================
+   PULSE ANIMATIONS
+   =================================== */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes pulseSoft {
+  0%, 100% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* ===================================
+   UTILITY CLASSES
+   =================================== */
+.animate-fadeInUp {
+  opacity: 0;
+  animation: fadeInUp 0.7s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+.animate-fadeIn {
+  opacity: 0;
+  animation: fadeIn 0.6s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+.animate-scaleIn {
+  opacity: 0;
+  animation: scaleIn 0.5s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+.animate-slideInFromLeft {
+  opacity: 0;
+  animation: slideInFromLeft 0.7s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+.animate-slideInFromRight {
+  opacity: 0;
+  animation: slideInFromRight 0.7s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+.animate-heroReveal {
+  opacity: 0;
+  animation: heroReveal 0.8s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+/* Stagger containers */
+.animate-stagger {
+  display: grid;
+}
+
+.animate-stagger-fast {
+  display: grid;
+}
+
+/* Individual stagger items */
+.animate-item-reveal {
+  opacity: 0;
+  animation: fadeInUp 0.6s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+.animate-card-entrance {
+  opacity: 0;
+  animation: cardEntrance 0.6s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger delays */
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+/* ===================================
+   BUTTON HOVER EFFECTS
+   =================================== */
+.btn-hover-lift {
+  transition: transform 0.3s cubic-bezier(0.33, 1, 0.68, 1),
+              box-shadow 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.btn-hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.btn-press {
+  transition: transform 0.12s ease;
+}
+
+.btn-press:active {
+  transform: scale(0.98);
+}
+
+/* ===================================
+   CARD HOVER EFFECTS
+   =================================== */
+.card-hover-lift {
+  transition: transform 0.35s cubic-bezier(0.33, 1, 0.68, 1),
+              box-shadow 0.35s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.card-hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* ===================================
+   ICON MICROINTERACTIONS
+   =================================== */
+.icon-hover-scale {
+  transition: transform 0.25s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.icon-hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* ===================================
+   TEXT REVEAL
+   =================================== */
+.text-reveal-line {
+  opacity: 0;
+  animation: fadeInUp 0.7s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+/* ===================================
+   SMOOTH SCROLL BEHAVIOR
+   =================================== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===================================
+   PARALLAX EFFECTS (Subtle)
+   =================================== */
+.parallax-subtle {
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+}
+
+/* ===================================
+   LOADING SPINNER
+   =================================== */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}

@@ -1,0 +1,262 @@
+/**
+ * Floating Decorative Elements - Premium Background Shapes
+ * Smooth, soft, slowly moving elements for visual richness
+ */
+
+/* ===================================
+   BASE CONTAINER
+   =================================== */
+.floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ===================================
+   SHARED SHAPE STYLES
+   =================================== */
+.floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(30px);
+  opacity: 0.55;
+  mix-blend-mode: screen;
+  will-change: transform;
+  animation: floatSlow infinite ease-in-out;
+}
+
+/* ===================================
+   HERO FLOATING ELEMENTS
+   =================================== */
+.hero-floating .floating-circle-large {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(30, 58, 95, 0.3) 0%, rgba(30, 58, 95, 0) 70%);
+  animation-duration: 25s;
+  opacity: 0.3;
+}
+
+.hero-floating .floating-orb-medium {
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(8, 145, 178, 0.25) 0%, rgba(8, 145, 178, 0) 70%);
+  animation-duration: 20s;
+  opacity: 0.35;
+}
+
+.hero-floating .floating-glow-small {
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(56, 178, 172, 0.3) 0%, rgba(56, 178, 172, 0) 70%);
+  animation-duration: 18s;
+  opacity: 0.4;
+}
+
+.hero-floating .floating-abstract {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, rgba(30, 58, 95, 0.2) 0%, rgba(8, 145, 178, 0.2) 100%);
+  border-radius: 40% 60% 70% 30%;
+  animation-duration: 22s;
+  opacity: 0.3;
+  filter: blur(50px);
+}
+
+.hero-floating .floating-sparkle {
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
+  animation-duration: 15s;
+  opacity: 0.5;
+  filter: blur(30px);
+}
+
+/* ===================================
+   SECTION FLOATING ELEMENTS
+   =================================== */
+.section-floating .floating-circle-blur {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(30, 58, 95, 0.15) 0%, rgba(30, 58, 95, 0) 70%);
+  animation-duration: 28s;
+  opacity: 0.25;
+}
+
+.section-floating .floating-blob {
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(8, 145, 178, 0.2) 0%, rgba(8, 145, 178, 0) 70%);
+  border-radius: 35% 65% 45% 55%;
+  animation-duration: 24s;
+  opacity: 0.3;
+  filter: blur(55px);
+}
+
+/* ===================================
+   MINIMAL FLOATING ELEMENTS
+   =================================== */
+.minimal-floating .floating-glow-minimal {
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(56, 178, 172, 0.15) 0%, rgba(56, 178, 172, 0) 70%);
+  animation-duration: 30s;
+  opacity: 0.2;
+  filter: blur(70px);
+}
+
+/* ===================================
+   DEFAULT FLOATING ELEMENTS
+   =================================== */
+.default-floating .floating-orb {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(30, 58, 95, 0.2) 0%, rgba(30, 58, 95, 0) 70%);
+  animation-duration: 26s;
+  opacity: 0.3;
+  filter: blur(60px);
+}
+
+.default-floating .floating-blur {
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(8, 145, 178, 0.18) 0%, rgba(8, 145, 178, 0) 70%);
+  animation-duration: 23s;
+  opacity: 0.28;
+  filter: blur(65px);
+}
+
+/* ===================================
+   FLOAT ANIMATIONS
+   =================================== */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(15px, -20px) scale(1.05);
+  }
+  50% {
+    transform: translate(-10px, 15px) scale(0.95);
+  }
+  75% {
+    transform: translate(20px, 10px) scale(1.02);
+  }
+}
+
+@keyframes floatOrbit {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(30px, -30px) rotate(120deg);
+  }
+  66% {
+    transform: translate(-20px, 20px) rotate(240deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+}
+
+/* ===================================
+   ADDITIONAL SHAPE VARIANTS
+   =================================== */
+.floating-shape.floating-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(30, 58, 95, 0.25) 0%,
+    rgba(8, 145, 178, 0.15) 50%,
+    rgba(56, 178, 172, 0.25) 100%
+  );
+  filter: blur(65px);
+}
+
+.floating-shape.floating-ring {
+  background: transparent;
+  border: 2px solid rgba(56, 178, 172, 0.3);
+  filter: blur(3px);
+}
+
+.floating-shape.floating-mesh {
+  background: 
+    radial-gradient(circle at 50% 50%, rgba(30, 58, 95, 0.2), transparent 70%),
+    radial-gradient(circle at 20% 80%, rgba(8, 145, 178, 0.15), transparent 70%);
+  filter: blur(50px);
+}
+
+/* ===================================
+   RESPONSIVE ADJUSTMENTS
+   =================================== */
+@media (max-width: 1024px) {
+  .hero-floating .floating-circle-large {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .hero-floating .floating-orb-medium {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .floating-shape {
+    filter: blur(40px);
+  }
+  
+  .hero-floating .floating-circle-large {
+    width: 200px;
+    height: 200px;
+    opacity: 0.2;
+  }
+  
+  .hero-floating .floating-orb-medium {
+    width: 150px;
+    height: 150px;
+    opacity: 0.25;
+  }
+  
+  .section-floating .floating-circle-blur {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .section-floating .floating-blob {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* ===================================
+   ACCESSIBILITY - REDUCED MOTION
+   =================================== */
+@media (prefers-reduced-motion: reduce) {
+  .floating-shape {
+    animation: none;
+    opacity: 0.15;
+  }
+}
+
+/* ===================================
+   PERFORMANCE OPTIMIZATION
+   =================================== */
+.floating-shape {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}

@@ -1,0 +1,405 @@
+/* ===================================
+   BOOK SERVICE PAGE STYLES
+   =================================== */
+.book-service-page {
+  width: 100%;
+}
+
+/* ===================================
+   BANNER SECTION
+   =================================== */
+.book-banner {
+  position: relative;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: white;
+  padding: var(--space-5xl) var(--space-3xl) var(--space-4xl);
+  margin-top: 80px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.book-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(56, 178, 172, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.book-banner-container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.book-banner h1 {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-lg);
+  letter-spacing: -0.5px;
+}
+
+.book-banner p {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: var(--font-weight-normal);
+}
+
+/* ===================================
+   INTRO SECTION
+   =================================== */
+.book-intro-section {
+  background-color: var(--color-white);
+  padding: var(--space-2xl) var(--container-padding);
+}
+
+.book-intro-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.book-intro-container p {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-normal);
+}
+
+/* ===================================
+   BOOKING FORM SECTION
+   =================================== */
+.booking-form-section.alt-bg {
+  background-color: var(--color-light-bg);
+  padding: var(--space-5xl) var(--container-padding);
+}
+
+.booking-form-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.booking-form {
+  background-color: var(--color-white);
+  padding: var(--space-2xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.form-group {
+  margin-bottom: var(--space-lg);
+}
+
+.form-group label {
+  display: block;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-sm);
+  font-size: var(--font-size-sm);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: var(--space-md);
+  border: 2px solid rgba(30, 58, 95, 0.1);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-md);
+  font-family: inherit;
+  transition: var(--transition-fast);
+  background-color: var(--color-white);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
+}
+
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+  border-color: #e53e3e;
+}
+
+.form-group .error-message {
+  display: block;
+  color: #e53e3e;
+  font-size: var(--font-size-xs);
+  margin-top: var(--space-sm);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn-submit-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  width: 100%;
+  padding: var(--space-md) var(--space-2xl);
+  background-color: var(--color-whatsapp);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-md);
+  cursor: pointer;
+  transition: var(--transition-base);
+  margin-top: var(--space-lg);
+}
+
+.btn-submit-whatsapp:hover {
+  background-color: #20ba5a;
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ===================================
+   QUICK ACTION SECTION
+   =================================== */
+.quick-action-section {
+  background-color: var(--color-white);
+  padding: var(--space-5xl) var(--container-padding);
+  text-align: center;
+}
+
+.quick-action-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.quick-action-container h2 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-2xl);
+  letter-spacing: -0.5px;
+}
+
+.quick-action-buttons {
+  display: flex;
+  gap: var(--space-lg);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-call-now,
+.btn-whatsapp-now {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: var(--space-lg) var(--space-3xl);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-md);
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+.btn-call-now {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn-call-now:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-whatsapp-now {
+  background-color: var(--color-whatsapp);
+  color: white;
+}
+
+.btn-whatsapp-now:hover {
+  background-color: #20ba5a;
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ===================================
+   WORKING HOURS SECTION
+   =================================== */
+.working-hours-section.alt-bg {
+  background-color: var(--color-light-bg);
+  padding: var(--space-5xl) var(--container-padding);
+  text-align: center;
+}
+
+.working-hours-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hours-content {
+  background-color: var(--color-white);
+  padding: var(--space-2xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.hours-content svg {
+  color: var(--color-primary);
+  margin-bottom: var(--space-lg);
+  width: 80px;
+  height: 80px;
+}
+
+.hours-content h2 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-2xl);
+  letter-spacing: -0.5px;
+}
+
+.hours-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hours-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-lg);
+  background-color: var(--color-light-bg);
+  border-radius: var(--radius-md);
+  border-left: 4px solid transparent;
+  transition: var(--transition-fast);
+}
+
+.hours-item:hover {
+  border-left-color: var(--color-accent);
+}
+
+.hours-item .days {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  font-size: var(--font-size-md);
+}
+
+.hours-item .time {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-md);
+}
+
+.hours-item .time.closed {
+  color: #e53e3e;
+  font-weight: var(--font-weight-bold);
+}
+
+/* ===================================
+   FINAL CTA SECTION
+   =================================== */
+.book-final-cta {
+  background-color: var(--color-white);
+  padding: var(--space-5xl) var(--container-padding);
+  text-align: center;
+}
+
+.book-final-cta-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.book-final-cta-container h2 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-lg);
+  letter-spacing: -0.5px;
+}
+
+.book-final-cta-container p {
+  font-size: var(--font-size-md);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-3xl);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+@media (max-width: 768px) {
+  .book-banner {
+    padding: var(--space-3xl) var(--container-padding) var(--space-2xl);
+    margin-top: 70px;
+  }
+
+  .book-banner h1 {
+    font-size: var(--font-size-3xl);
+  }
+
+  .booking-form {
+    padding: var(--space-lg);
+  }
+
+  .quick-action-container h2,
+  .hours-content h2,
+  .book-final-cta-container h2 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .quick-action-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-call-now,
+  .btn-whatsapp-now {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .hours-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-banner {
+    padding: var(--space-2xl) var(--container-padding);
+  }
+
+  .book-banner h1 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .booking-form-section {
+    padding: var(--space-3xl) var(--container-padding);
+  }
+
+  .booking-form {
+    padding: var(--space-lg);
+  }
+
+  .quick-action-section,
+  .working-hours-section,
+  .book-final-cta {
+    padding: var(--space-3xl) var(--container-padding);
+  }
+
+  .hours-content {
+    padding: var(--space-lg);
+  }
+}

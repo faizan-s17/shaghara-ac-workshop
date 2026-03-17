@@ -1,0 +1,311 @@
+/* ===================================
+   FOOTER STYLES - PROFESSIONAL INDUSTRIAL DARK
+   =================================== */
+.footer {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-white);
+  padding: var(--space-3xl) 0 var(--space-xl);
+  margin-top: var(--space-4xl);
+  position: relative;
+}
+
+/* Subtle texture overlay */
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.footer-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* Footer Grid Layout */
+.footer-columns {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.2fr;
+  gap: var(--space-2xl);
+  padding: var(--space-2xl) 0;
+  margin-bottom: var(--space-xl);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column h3 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-md);
+  color: var(--color-white);
+  letter-spacing: -0.01em;
+  line-height: var(--line-height-tight);
+}
+
+.footer-column h4 {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-md);
+  color: var(--color-accent-light);
+  letter-spacing: -0.01em;
+  line-height: var(--line-height-tight);
+}
+
+.footer-column p {
+  line-height: var(--line-height-relaxed);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+.footer-column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: var(--space-sm);
+}
+
+.footer-column ul li a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: all var(--transition-fast) var(--easing-ease-out);
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  gap: var(--space-xs);
+  position: relative;
+}
+
+/* Animated dot effect */
+.footer-column ul li a::before {
+  content: '•';
+  position: absolute;
+  left: -12px;
+  opacity: 0;
+  color: var(--color-accent-light);
+  transition: all var(--transition-fast) var(--easing-ease-out);
+  font-size: var(--font-size-base);
+}
+
+.footer-column ul li a:hover {
+  color: var(--color-accent-light);
+  transform: translateX(4px);
+}
+
+.footer-column ul li a:hover::before {
+  opacity: 1;
+  left: -8px;
+}
+
+/* Contact Info Section */
+.contact-info {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-info li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+  margin-bottom: var(--space-sm);
+}
+
+.contact-info li:last-child {
+  margin-bottom: 0;
+}
+
+.contact-info li svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--color-accent-light);
+  opacity: 0.9;
+  width: 16px;
+  height: 16px;
+}
+
+.contact-info li a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: color var(--transition-fast) var(--easing-ease-out);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+}
+
+.contact-info li a:hover {
+  color: var(--color-accent-light);
+}
+
+/* Icon Sizes */
+.footer-map-icon,
+.footer-whatsapp-icon,
+.header-whatsapp-icon,
+.contact-whatsapp-icon,
+.contact-map-icon,
+.btn-icon-whatsapp,
+.floating-whatsapp-icon,
+.icon-whatsapp {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.header-whatsapp-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.btn-icon-whatsapp {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: var(--space-lg);
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: -0.005em;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+@media (max-width: 1024px) {
+  .footer-columns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: var(--space-2xl) 0 var(--space-lg);
+    margin-top: var(--space-3xl);
+  }
+
+  .footer-container {
+    padding: 0 var(--space-lg);
+  }
+
+  .footer-columns {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    padding: var(--space-xl) 0;
+    margin-bottom: var(--space-lg);
+  }
+
+  .footer-column {
+    margin-bottom: 0;
+  }
+
+  .footer-column h3 {
+    margin-bottom: var(--space-sm);
+    font-size: var(--font-size-base);
+  }
+
+  .footer-column h4 {
+    margin-bottom: var(--space-sm);
+    font-size: var(--font-size-sm);
+  }
+
+  .footer-column p {
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-normal);
+  }
+
+  .footer-column ul li {
+    margin-bottom: var(--space-xs);
+  }
+
+  .footer-column ul li a {
+    font-size: var(--font-size-xs);
+  }
+
+  .contact-info li {
+    gap: var(--space-xs);
+    margin-bottom: var(--space-xs);
+  }
+
+  .contact-info li svg {
+    width: 14px;
+    height: 14px;
+    margin-top: 1px;
+  }
+
+  .footer-bottom {
+    padding-top: var(--space-md);
+  }
+
+  .footer-bottom p {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: var(--space-2xl) 0 var(--space-lg);
+    margin-top: var(--space-2xl);
+  }
+
+  .footer-container {
+    padding: 0 var(--space-lg);
+  }
+
+  .footer-columns {
+    gap: var(--space-lg);
+    padding: var(--space-lg) 0;
+    margin-bottom: var(--space-lg);
+  }
+
+  .footer-column h3 {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--space-sm);
+  }
+
+  .footer-column h4 {
+    font-size: var(--font-size-xs);
+    margin-bottom: var(--space-sm);
+  }
+
+  .footer-column p,
+  .contact-info li {
+    font-size: var(--font-size-xs);
+  }
+
+  .footer-column ul li {
+    margin-bottom: var(--space-xs);
+  }
+
+  .contact-info li {
+    margin-bottom: var(--space-xs);
+  }
+
+  .footer-bottom {
+    padding-top: var(--space-sm);
+  }
+}

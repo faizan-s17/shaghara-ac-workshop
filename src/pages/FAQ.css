@@ -1,0 +1,215 @@
+/* ===================================
+   FAQ PAGE STYLES
+   =================================== */
+.faq-page {
+  width: 100%;
+}
+
+/* ===================================
+   BANNER SECTION
+   =================================== */
+.faq-banner {
+  position: relative;
+  background: linear-gradient(135deg, rgba(30, 58, 95, 0.85) 0%, rgba(19, 41, 73, 0.85) 100%), url('/contact-bg-optimized.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: var(--space-4xl) var(--container-padding) var(--space-3xl);
+  margin-top: 80px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.faq-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(56, 178, 172, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.faq-banner-container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.faq-banner h1 {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-lg);
+  letter-spacing: -0.5px;
+  color: #ffffff !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.faq-banner p {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: var(--font-weight-normal);
+}
+
+/* ===================================
+   FAQ ACCORDION SECTION
+   =================================== */
+.faq-accordion-section {
+  background-color: var(--color-white);
+  padding: var(--space-5xl) var(--container-padding);
+}
+
+.faq-accordion-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ===================================
+   HELP SECTION
+   =================================== */
+.faq-help-section.alt-bg {
+  background-color: var(--color-light-bg);
+  padding: var(--space-5xl) var(--container-padding);
+  text-align: center;
+}
+
+.faq-help-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-help-container h2 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-lg);
+  letter-spacing: -0.5px;
+}
+
+.faq-help-container p {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-3xl);
+  font-weight: var(--font-weight-normal);
+}
+
+.help-cta {
+  display: flex;
+  gap: var(--space-lg);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-whatsapp-help,
+.btn-call-help {
+  display: inline-block;
+  padding: var(--space-md) var(--space-2xl);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-md);
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+.btn-whatsapp-help {
+  background-color: var(--color-whatsapp);
+  color: white;
+}
+
+.btn-whatsapp-help:hover {
+  background-color: #20ba5a;
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-call-help {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn-call-help:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ===================================
+   FINAL CTA SECTION
+   =================================== */
+.faq-final-cta {
+  background-color: var(--color-white);
+  padding: var(--space-5xl) var(--container-padding);
+  text-align: center;
+}
+
+.faq-final-cta-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-final-cta-container h2 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-lg);
+  letter-spacing: -0.5px;
+}
+
+.faq-final-cta-container p {
+  font-size: var(--font-size-md);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-3xl);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .faq-banner {
+    padding: var(--space-3xl) var(--container-padding) var(--space-2xl);
+    margin-top: 70px;
+  }
+
+  .faq-banner h1 {
+    font-size: var(--font-size-3xl);
+  }
+
+  .faq-help-container h2,
+  .faq-final-cta-container h2 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .help-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-whatsapp-help,
+  .btn-call-help {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-banner {
+    padding: var(--space-2xl) var(--container-padding);
+  }
+
+  .faq-banner h1 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .faq-accordion-section,
+  .faq-help-section,
+  .faq-final-cta {
+    padding: var(--space-3xl) var(--container-padding);
+  }
+}

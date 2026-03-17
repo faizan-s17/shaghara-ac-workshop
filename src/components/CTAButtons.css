@@ -1,0 +1,146 @@
+/* ===================================
+   CTA BUTTONS STYLES - PREMIUM
+   =================================== */
+.cta-buttons-group {
+  display: flex;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: var(--space-lg) var(--space-xl);
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  transition: all var(--transition-base) var(--easing-ease-out);
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  transition: left var(--transition-base) var(--easing-ease);
+}
+
+.btn-cta:hover::before {
+  left: 100%;
+}
+
+.btn-cta svg {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+/* Size Variants */
+.btn-small {
+  padding: var(--space-sm) var(--space-lg);
+  font-size: var(--font-size-sm);
+}
+
+.btn-medium {
+  padding: var(--space-lg) var(--space-xl);
+  font-size: var(--font-size-base);
+}
+
+.btn-large {
+  padding: var(--space-xl) var(--space-2xl);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Color Variants */
+.btn-call {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  box-shadow: 0 4px 12px rgba(30, 58, 95, 0.2);
+}
+
+.btn-call:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(30, 58, 95, 0.3);
+}
+
+.btn-call:active {
+  transform: translateY(0);
+}
+
+.btn-whatsapp {
+  background-color: var(--color-whatsapp);
+  color: var(--color-white);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
+}
+
+.btn-whatsapp:hover {
+  background-color: var(--color-success-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:active {
+  transform: translateY(0);
+}
+
+.btn-book {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  box-shadow: 0 4px 12px rgba(8, 145, 178, 0.2);
+}
+
+.btn-book:hover {
+  background-color: var(--color-accent-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(8, 145, 178, 0.3);
+}
+
+.btn-book:active {
+  transform: translateY(0);
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+@media (max-width: 768px) {
+  .cta-buttons-group {
+    gap: var(--space-md);
+  }
+
+  .btn-medium {
+    padding: var(--space-md) var(--space-lg);
+    font-size: var(--font-size-base);
+  }
+
+  .btn-large {
+    padding: var(--space-lg) var(--space-xl);
+    font-size: var(--font-size-base);
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-buttons-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-cta {
+    width: 100%;
+  }
+}
