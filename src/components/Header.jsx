@@ -76,7 +76,7 @@ const Header = () => {
         {/* Logo Section */}
         <div className="header-logo">
           <Link to="/">
-            <img src="/websitelogo.PNG" alt="Shaghara AC Workshop" className="header-logo-image" />
+            <img src="/websitelogo.webp" alt="Shaghara AC Workshop" className="header-logo-image" loading="lazy" />
           </Link>
         </div>
 
@@ -103,7 +103,7 @@ const Header = () => {
             <span>Call Now</span>
           </button>
           <button onClick={handleWhatsApp} className="btn-whatsapp">
-            <img src="/assets/whatsappicon.svg" alt="WhatsApp" className="header-whatsapp-icon" />
+            <img src="/assets/whatsappicon.svg" alt="WhatsApp" className="header-whatsapp-icon" loading="lazy" />
             <span>WhatsApp Us</span>
           </button>
         </div>
@@ -141,7 +141,7 @@ const Header = () => {
               <span>Call Now</span>
             </button>
             <button onClick={handleWhatsApp} className="btn-whatsapp">
-              <img src="/assets/whatsappicon.svg" alt="WhatsApp" className="header-whatsapp-icon" />
+              <img src="/assets/whatsappicon.svg" alt="WhatsApp" className="header-whatsapp-icon" loading="lazy" />
               <span>WhatsApp Us</span>
             </button>
           </div>

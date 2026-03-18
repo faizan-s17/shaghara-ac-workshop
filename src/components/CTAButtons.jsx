@@ -21,7 +21,7 @@ const CTAButtons = ({ variant = 'default', size = 'medium', onBookService }) => 
           <span>Call Now</span>
         </button>
         <button onClick={handleWhatsApp} className={`${buttonClass} btn-whatsapp btn-hover-lift btn-press`}>
-          <img src="/assets/whatsappicon.svg" alt="WhatsApp" className="icon-whatsapp" />
+          <img src="/assets/whatsappicon.svg" alt="WhatsApp" className="icon-whatsapp" loading="lazy" />
           <span>WhatsApp Us</span>
         </button>
       </div>
@@ -36,7 +36,7 @@ const CTAButtons = ({ variant = 'default', size = 'medium', onBookService }) => 
         <span>Call Now</span>
       </button>
       <button onClick={handleWhatsApp} className={`${buttonClass} btn-whatsapp btn-hover-lift btn-press`}>
-        <img src="/assets/whatsappicon.svg" alt="WhatsApp" className="icon-whatsapp" />
+        <img src="/assets/whatsappicon.svg" alt="WhatsApp" className="icon-whatsapp" loading="lazy" />
         <span>WhatsApp Now</span>
       </button>
     </div>

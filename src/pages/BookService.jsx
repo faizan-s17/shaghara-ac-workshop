@@ -184,7 +184,7 @@ const BookService = () => {
             </div>
 
             <button type="submit" className="btn-submit-whatsapp">
-              <img src="/assets/whatsappicon.svg" alt="WhatsApp" className="btn-icon-whatsapp" />
+              <img src="/assets/whatsappicon.svg" alt="WhatsApp" className="btn-icon-whatsapp" loading="lazy" />
               Send on WhatsApp
             </button>
           </form>
@@ -208,7 +208,7 @@ const BookService = () => {
               rel="noopener noreferrer"
               className="btn-whatsapp-now"
             >
-              <img src="/assets/whatsappicon.svg" alt="WhatsApp" className="btn-icon-whatsapp" />
+              <img src="/assets/whatsappicon.svg" alt="WhatsApp" className="btn-icon-whatsapp" loading="lazy" />
               WhatsApp Now
             </a>
           </div>

@@ -200,6 +200,21 @@ Problem: [Problem Description]
 Preferred Time: [Preferred Time]
 ```
 
+## Image optimization
+
+This project includes a small image optimization script that converts raster images in `public/` to WebP for better loading performance.
+
+- Install the required package:
+```bash
+npm install --save-dev sharp
+```
+- Run the optimizer:
+```bash
+npm run optimize:images
+```
+
+The script generates `.webp` versions next to the originals. Update references in CSS/JSX to point to the `.webp` versions when possible (some have already been updated).
+
 ## ⚙️ Configuration
 
 ### Update Phone Numbers

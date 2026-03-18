@@ -56,7 +56,7 @@ const Home = () => {
 
           <div className="hero-image animate-scaleIn delay-200">
             <div className="hero-image-card parallax-subtle">
-              <img src="/landingpage.png" alt="Professional HVAC & Appliance Repair Service" className="hero-landing-image" loading="lazy" />
+              <img src="/landingpage.webp" alt="Professional HVAC & Appliance Repair Service" className="hero-landing-image" loading="lazy" />
               <div className="hero-image-overlay" aria-hidden="true"></div>
             </div>
           </div>

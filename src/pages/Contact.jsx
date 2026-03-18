@@ -95,7 +95,7 @@ const Contact = () => {
               <div className="contact-cards-grid">
                 <div className="contact-info-card">
                   <div className="contact-info-icon">
-                    <img src="/assets/whatsappicon.svg" alt="WhatsApp" className="contact-whatsapp-icon" />
+                    <img src="/assets/whatsappicon.svg" alt="WhatsApp" className="contact-whatsapp-icon" loading="lazy" />
                   </div>
                   <h3>WhatsApp</h3>
                   <a
@@ -109,7 +109,7 @@ const Contact = () => {
 
                 <div className="contact-info-card">
                   <div className="contact-info-icon">
-                    <img src="/assets/googlemapsicon.svg" alt="Map" className="contact-map-icon" />
+                    <img src="/assets/googlemapsicon.svg" alt="Map" className="contact-map-icon" loading="lazy" />
                   </div>
                   <h3>Our Location</h3>
                   <p>
@@ -237,7 +237,7 @@ const Contact = () => {
                   </div>
 
                   <button type="submit" className="btn-submit-whatsapp">
-                    <img src="/assets/whatsappicon.svg" alt="WhatsApp" className="btn-icon-whatsapp" />
+                    <img src="/assets/whatsappicon.svg" alt="WhatsApp" className="btn-icon-whatsapp" loading="lazy" />
                     Send on WhatsApp
                   </button>
                 </form>

@@ -46,7 +46,7 @@ const Footer = () => {
             <h4>Contact Info</h4>
             <ul className="contact-info">
               <li>
-                <img src="/assets/googlemapsicon.svg" alt="Map" className="footer-map-icon" />
+                <img src="/assets/googlemapsicon.svg" alt="Map" className="footer-map-icon" loading="lazy" />
                 <span>
                   <a href="https://www.google.com/maps/search/Abu+Shagara,+Sharjah,+UAE" target="_blank" rel="noopener noreferrer">Abu Shagara, Sharjah, UAE</a>
                 </span>
@@ -58,7 +58,7 @@ const Footer = () => {
               </li>
 
               <li>
-                <img src="/assets/whatsappicon.svg" alt="WhatsApp" className="footer-whatsapp-icon" />
+                <img src="/assets/whatsappicon.svg" alt="WhatsApp" className="footer-whatsapp-icon" loading="lazy" />
                 <a href={`https://wa.me/${BUSINESS_WHATSAPP.replace('+', '')}`} target="_blank" rel="noopener noreferrer">WhatsApp: {BUSINESS_WHATSAPP}</a>
               </li>
 

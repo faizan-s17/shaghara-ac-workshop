@@ -12,7 +12,7 @@ const FloatingWhatsApp = () => {
       onClick={handleClick}
       aria-label="Chat on WhatsApp"
     >
-      <img src="/assets/whatsappicon.svg" alt="WhatsApp" className="floating-whatsapp-icon" />
+      <img src="/assets/whatsappicon.svg" alt="WhatsApp" className="floating-whatsapp-icon" loading="lazy" />
     </button>
   );
 };
