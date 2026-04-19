@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import { Plus, Minus } from 'lucide-react';
 import './FAQAccordion.css';
 
 const FAQAccordion = ({ faqs }) => {
@@ -12,26 +12,27 @@ const FAQAccordion = ({ faqs }) => {
   return (
     <div className="faq-accordion">
       {faqs.map((faq, index) => (
-        <div key={faq.id} className="faq-item">
+        <div key={faq.id} className={`faq-item ${openIndex === index ? 'open' : ''}`}>
           <button
             className="faq-question"
             onClick={() => toggleFAQ(index)}
             aria-expanded={openIndex === index}
           >
             <span>{faq.question}</span>
-            <ChevronDown 
-              size={20} 
-              className={`faq-icon ${openIndex === index ? 'open' : ''}`} 
-            />
+            <span className="faq-toggle">
+              {openIndex === index ? (
+                <Minus size={18} className="faq-toggle-icon open" />
+              ) : (
+                <Plus size={18} className="faq-toggle-icon" />
+              )}
+            </span>
           </button>
-          
-          {openIndex === index && (
-            <div className="faq-answer">
-              {faq.answer.split('\n').map((line, i) => (
-                <p key={i}>{line}</p>
-              ))}
-            </div>
-          )}
+
+          <div className={`faq-answer ${openIndex === index ? 'open' : ''}`} aria-hidden={openIndex !== index}>
+            {faq.answer.split('\n').map((line, i) => (
+              <p key={i}>{line}</p>
+            ))}
+          </div>
         </div>
       ))}
     </div>

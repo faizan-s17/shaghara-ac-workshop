@@ -10,78 +10,93 @@ import { serviceAreas } from '../data/areas';
 import './Home.css';
 
 const Home = () => {
-  const trustHighlights = [
-    { icon: Award, title: '25+ Years Experience', description: 'Decades of expertise in appliance repair' },
-    { icon: MapPin, title: 'Door-to-Door Service', description: 'Convenient doorstep repair service' },
-    { icon: Users, title: 'AC Repair Specialists', description: 'Expert technicians for AC solutions' },
-    { icon: Zap, title: 'Fast Response', description: 'Quick and reliable service' },
-    { icon: MapPin, title: 'Trusted Local Service', description: 'Trusted local business in Abu Shagara' }
-  ];
+  
 
   return (
     <div className="home">
       {/* Section 1: Hero Section */}
       <section className="hero-section">
+        {/* Radial Light Overlay */}
+        <div className="hero-radial-overlay" aria-hidden="true"></div>
+        
         <div className="hero-container">
           {/* Floating Decorative Elements */}
           <FloatingElements variant="hero" />
           
           <div className="hero-content">
-            <h1 className="animate-hero-reveal">Professional AC & Home Appliance Repair</h1>
-            <p className="hero-subtitle animate-fadeInUp delay-200">
-              Trusted door-to-door service in Abu Shagara, Sharjah, UAE with 25+ years of experience.
-            </p>
-            
-            <ul className="hero-services-list animate-stagger-fast">
-              <li><CheckCircle size={20} /> Split AC Repair</li>
-              <li><CheckCircle size={20} /> Window AC Repair</li>
-              <li><CheckCircle size={20} /> Washing Machine Repair</li>
-              <li><CheckCircle size={20} /> Refrigerator Repair</li>
-              <li><CheckCircle size={20} /> Water Dispenser Repair</li>
-            </ul>
+            {/* Premium Label */}
+            <div className="hero-label animate-fadeInDown">
+              <span>✓</span>
+              <span>Premier AC & Appliance Care — Sharjah</span>
+            </div>
 
-            <div className="hero-cta animate-fadeInUp delay-300">
-              <Link to="/contact" className="btn-hero-primary btn-hover-lift btn-press">Book Service</Link>
-              <a 
-                href="https://wa.me/971507971172?text=Hello,%20I%20have%20an%20inquiry." 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="btn-hero-secondary btn-hover-lift btn-press"
-              >
-                WhatsApp Now
-              </a>
-              <a href="tel:+971507971172" className="btn-hero-tertiary btn-hover-lift btn-press">Call Now</a>
+            {/* Main Heading */}
+            <h1 className="hero-title animate-hero-reveal">
+              Expert AC & Home Appliance Repair
+            </h1>
+
+            {/* Subtitle */}
+            <p className="hero-subtitle animate-fadeInUp delay-200">
+              On‑site service in Abu Shagara. 25+ years of proven expertise.
+              Fast repairs for major appliances and AC systems.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="hero-cta-section animate-fadeInUp delay-300">
+              <div className="hero-cta-buttons">
+                <Link to="/contact" className="btn-hero-primary btn-hover-lift btn-press">
+                  Schedule Service
+                </Link>
+                <a 
+                  href="https://wa.me/971507971172?text=Hello,%20I%20have%20an%20inquiry." 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="btn-hero-secondary btn-hover-lift btn-press"
+                >
+                  Message on WhatsApp
+                </a>
+                <a href="tel:+971507971172" className="btn-hero-tertiary btn-hover-lift btn-press">
+                  Call Us
+                </a>
+              </div>
+            </div>
+
+            {/* Trust Badges */}
+            <div className="hero-trust-badges animate-fadeInUp delay-400">
+              <div className="trust-badge">
+                <span className="badge-icon">⭐</span>
+                <span>25+ Years Experience</span>
+              </div>
+              <div className="trust-badge">
+                <span className="badge-icon">⚡</span>
+                <span>Rapid Response</span>
+              </div>
+              <div className="trust-badge">
+                <span className="badge-icon">✓</span>
+                <span>Certified Technicians</span>
+              </div>
             </div>
           </div>
 
+          {/* Hero Image Section */}
           <div className="hero-image animate-scaleIn delay-200">
             <div className="hero-image-card parallax-subtle">
               <img src="/landingpage.webp" alt="Professional HVAC & Appliance Repair Service" className="hero-landing-image" loading="lazy" />
               <div className="hero-image-overlay" aria-hidden="true"></div>
+              
+              {/* Floating Emergency Badge */}
+              <div className="hero-floating-badge">
+                <div className="badge-content">
+                  <div className="badge-dot"></div>
+                  <span>24/7 Emergency<br/>Service Available</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 2: Trust Highlights */}
-      <section className="trust-section">
-        <div className="trust-container">
-          {/* Floating Decorative Elements */}
-          <FloatingElements variant="minimal" />
-          
-          <div className="trust-grid animate-stagger-fast">
-            {trustHighlights.map((item, index) => (
-              <div key={index} className="trust-card card-hover-lift animate-item-reveal" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="trust-icon icon-hover-scale">
-                  <item.icon size={40} />
-                </div>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* Section 3: About Preview */}
       <section className="about-preview-section">
@@ -89,15 +104,31 @@ const Home = () => {
           {/* Floating Decorative Elements */}
           <FloatingElements variant="section" />
           
-          <div className="about-preview-content animate-fadeInUp">
-            <h2>Welcome to Shaghara AC Workshop</h2>
-            <p className="delay-100">
-              Shaghara AC Workshop is a trusted home appliance repair and AC service business 
-              located in Abu Shagara, Sharjah, UAE. With over 25 years of experience, we provide 
-              reliable door-to-door repair services for AC units, washing machines, refrigerators, 
-              and water dispensers.
-            </p>
-            <Link to="/about" className="btn-read-more btn-hover-lift btn-press delay-200">Read More</Link>
+          <div className="about-preview-content">
+            {/* Left Column - Text */}
+            <div className="about-text-column animate-fadeInLeft">
+              <h2>Welcome to Shaghara AC Workshop</h2>
+              <div className="about-divider"></div>
+              <p>
+                Shaghara AC Workshop delivers professional on‑site repair and maintenance for
+                household appliances. Based in Abu Shagara, we combine technical skill with
+                dependable service backed by over 25 years' experience.
+              </p>
+              <Link to="/about" className="btn-read-more-text btn-hover-lift btn-press">
+                Read More <span className="arrow">→</span>
+              </Link>
+            </div>
+
+            {/* Right Column - Real Image */}
+            <div className="about-image-column animate-scaleIn delay-200">
+              <div className="about-image-wrapper">
+                <img src="/landingpage.webp" alt="Professional AC repair technician at work" className="about-real-image" loading="lazy" />
+                <div className="about-image-badge">
+                  <span className="badge-number">25+</span>
+                  <span className="badge-text">Years of<br/>Excellence</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -108,9 +139,9 @@ const Home = () => {
           {/* Floating Decorative Elements */}
           <FloatingElements variant="section" />
           
-          <div className="section-header animate-fadeInUp">
+            <div className="section-header animate-fadeInUp">
             <h2>Our Services</h2>
-            <p>Professional repair services for all major home appliances</p>
+            <p>Comprehensive repair and maintenance for all major home appliances</p>
           </div>
           
           <div className="services-grid animate-stagger">
@@ -136,28 +167,46 @@ const Home = () => {
           
           <div className="why-choose-grid animate-stagger-fast">
             <div className="choose-item card-hover-lift animate-item-reveal" style={{ animationDelay: '0.1s' }}>
-              <Award size={32} className="icon-hover-scale" />
-              <h3>More than 25 years of experience</h3>
+              <div className="choose-icon">
+                <Award size={36} />
+              </div>
+              <h3>25+ Years Experience</h3>
+              <p>Decades of hands‑on expertise in AC and appliance repair</p>
             </div>
             <div className="choose-item card-hover-lift animate-item-reveal" style={{ animationDelay: '0.2s' }}>
-              <MapPin size={32} className="icon-hover-scale" />
-              <h3>Door-to-door home service</h3>
+              <div className="choose-icon">
+                <MapPin size={36} />
+              </div>
+              <h3>On‑Site Service</h3>
+              <p>Professional repairs performed at your home, on your schedule</p>
             </div>
             <div className="choose-item card-hover-lift animate-item-reveal" style={{ animationDelay: '0.3s' }}>
-              <CheckCircle size={32} className="icon-hover-scale" />
-              <h3>Main focus on AC repair and servicing</h3>
+              <div className="choose-icon">
+                <CheckCircle size={36} />
+              </div>
+              <h3>AC Specialists</h3>
+              <p>Certified technicians focused on precise, lasting repairs</p>
             </div>
             <div className="choose-item card-hover-lift animate-item-reveal" style={{ animationDelay: '0.4s' }}>
-              <Users size={32} className="icon-hover-scale" />
-              <h3>Reliable and honest work</h3>
+              <div className="choose-icon">
+                <Users size={36} />
+              </div>
+              <h3>Reliable & Honest</h3>
+              <p>Transparent pricing and service you can trust</p>
             </div>
             <div className="choose-item card-hover-lift animate-item-reveal" style={{ animationDelay: '0.5s' }}>
-              <MapPin size={32} className="icon-hover-scale" />
-              <h3>Local business in Abu Shagara, Sharjah</h3>
+              <div className="choose-icon">
+                <MapPin size={36} />
+              </div>
+              <h3>Local in Abu Shagara</h3>
+              <p>A community-focused workshop serving Sharjah with integrity</p>
             </div>
             <div className="choose-item card-hover-lift animate-item-reveal" style={{ animationDelay: '0.6s' }}>
-              <Zap size={32} className="icon-hover-scale" />
-              <h3>Support for multiple appliances</h3>
+              <div className="choose-icon">
+                <Zap size={36} />
+              </div>
+              <h3>Multiple Appliances</h3>
+              <p>Complete repair support for ACs, washers, fridges, and water dispensers</p>
             </div>
           </div>
         </div>
@@ -170,7 +219,7 @@ const Home = () => {
       <section className="service-areas-preview-section">
         <div className="service-areas-preview-container">
           <h2 className="animate-fadeInUp">Areas We Serve</h2>
-          <p className="animate-fadeInUp delay-100">We provide doorstep repair service across all areas of Sharjah and Ajman.</p>
+          <p className="animate-fadeInUp delay-100">On‑site appliance and AC repair across Sharjah and Ajman.</p>
           
           <div className="areas-tags animate-stagger-fast">
             {serviceAreas.slice(0, 5).map((area, index) => (
@@ -197,8 +246,8 @@ const Home = () => {
           {/* Floating Decorative Elements */}
           <FloatingElements variant="minimal" />
           
-          <h2>Need AC or Appliance Repair at Home?</h2>
-          <p>Contact Shaghara AC Workshop today for reliable doorstep service in Sharjah.</p>
+          <h2>Need On‑site Repair?</h2>
+          <p>Contact Shaghara AC Workshop for prompt, professional service across Sharjah.</p>
           <CTAButtons variant="all" size="large" />
         </div>
       </section>

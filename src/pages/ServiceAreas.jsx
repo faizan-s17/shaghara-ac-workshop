@@ -11,7 +11,14 @@ const ServiceAreas = () => {
       <section className="areas-banner">
         <div className="areas-banner-container">
           <h1>Areas We Serve</h1>
-          <p>Door-to-door AC and home appliance repair service across Sharjah and Ajman</p>
+          <p>On‑site AC and appliance repair across Sharjah and Ajman</p>
+          <div className="location-chips" aria-hidden>
+            <button className="location-chip"><MapPin size={16} />Sharjah</button>
+            <button className="location-chip"><MapPin size={16} />Ajman</button>
+            <button className="location-chip"><MapPin size={16} />Dubai</button>
+          </div>
+
+          <Link to="#main-areas" className="btn-view-areas">View Service Areas</Link>
         </div>
       </section>
 
@@ -19,16 +26,15 @@ const ServiceAreas = () => {
       <section className="areas-intro-section">
         <div className="areas-intro-container">
           <p>
-            Shaghara AC Workshop provides door-to-door AC and home appliance repair
-            services across all areas of Sharjah and Ajman. Our experienced
-            technicians serve residential, commercial, and industrial locations
-            with quick response times and reliable workmanship.
+            Shaghara AC Workshop delivers on‑site AC and appliance repair across
+            Sharjah and Ajman. Our technicians serve homes and businesses with
+            prompt response and professional workmanship.
           </p>
         </div>
       </section>
 
       {/* Main Service Areas */}
-      <section className="main-areas-section">
+      <section id="main-areas" className="main-areas-section">
         <div className="main-areas-container">
           <h2>Our Primary Service Areas</h2>
           
@@ -67,9 +73,8 @@ const ServiceAreas = () => {
         <div className="coverage-info-container">
           <h2>Not Sure If We Cover Your Area?</h2>
           <p>
-            We service all areas across Sharjah and Ajman. If you're unsure whether
-            we cover your specific location, contact us on WhatsApp or call to
-            confirm availability.
+            We cover Sharjah and Ajman. If you are unsure about your location,
+            contact us via WhatsApp or call and we will confirm availability.
           </p>
           
           <div className="coverage-cta">
@@ -79,7 +84,7 @@ const ServiceAreas = () => {
               rel="noopener noreferrer"
               className="btn-check-availability"
             >
-              Check Availability on WhatsApp
+              Check Availability
             </a>
           </div>
         </div>
@@ -89,8 +94,10 @@ const ServiceAreas = () => {
       <section className="areas-final-cta">
         <div className="areas-final-cta-container">
           <h2>Need Appliance Repair Service?</h2>
-          <p>Contact us today for reliable doorstep service in your area.</p>
-          <CTAButtons variant="all" size="large" />
+          <p className="areas-final-subtext">Typical response within minutes</p>
+          <div className="areas-final-cta-buttons">
+            <CTAButtons variant="callwhatsapp" size="large" />
+          </div>
         </div>
       </section>
     </div>

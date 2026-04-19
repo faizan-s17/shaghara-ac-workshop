@@ -1,7 +1,7 @@
 export const serviceAreas = [
   {
     name: 'Sharjah & Ajman',
-    description: 'We provide doorstep AC and home appliance repair across all areas of Sharjah and Ajman, including residential, commercial, and industrial neighborhoods.'
+    description: 'On‑site AC and appliance repair across Sharjah and Ajman, serving residential and commercial clients.'
   }
 ];
 

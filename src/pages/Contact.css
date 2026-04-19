@@ -8,16 +8,30 @@
 
 /* BANNER SECTION */
 .contact-banner {
-  background: linear-gradient(135deg, rgba(30, 58, 95, 0.85) 0%, rgba(19, 41, 73, 0.85) 100%), url('/contact-bg-optimized.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 40%, #1e40af 70%, #2563eb 100%);
+  background-size: 300% 300%;
+  animation: contactGradient 10s ease infinite;
   color: var(--color-white);
-  padding: var(--space-4xl) var(--container-padding) var(--space-3xl);
+  padding: var(--space-5xl) var(--container-padding) var(--space-4xl);
   margin-top: 80px;
   text-align: center;
   position: relative;
   overflow: hidden;
+}
+
+.contact-banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/contact-bg-optimized.webp') center/cover no-repeat;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+@keyframes contactGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .contact-banner::before {
@@ -78,15 +92,15 @@
 
 /* Left Side - Contact Info */
 .contact-info-side {
-  background: linear-gradient(135deg, rgba(30, 58, 95, 0.97) 0%, rgba(19, 41, 73, 0.95) 100%);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.97) 0%, rgba(30, 80, 192, 0.95) 100%);
   padding: var(--space-2xl);
   border-radius: var(--radius-2xl);
   color: white;
   position: relative;
   overflow: visible;
   box-shadow: 
-    0 20px 60px rgba(0, 0, 0, 0.15),
-    0 0 40px rgba(56, 178, 172, 0.1);
+    var(--shadow-xl),
+    0 0 40px rgba(14, 165, 233, 0.1);
 }
 
 .contact-info-side::before {
@@ -96,7 +110,7 @@
   right: -10%;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(56, 178, 172, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, transparent 70%);
   border-radius: 50%;
   z-index: 0;
   pointer-events: none;
@@ -109,7 +123,7 @@
   left: -5%;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(8, 145, 178, 0.12) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.12) 0%, transparent 70%);
   border-radius: 50%;
   z-index: 0;
   pointer-events: none;
@@ -160,7 +174,7 @@
 .contact-info-card:hover {
   background: rgba(255, 255, 255, 0.12);
   transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-lg);
   border-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -175,12 +189,12 @@
   justify-content: center;
   color: var(--color-white);
   transition: all var(--transition-base) var(--easing-ease);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow-sm);
 }
 
 .contact-info-card:hover .contact-info-icon {
   transform: scale(1.1) rotate(-5deg);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--shadow-lg);
 }
 
 .contact-info-card h3 {
@@ -209,7 +223,7 @@
   border-radius: var(--radius-md);
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-md);
   height: 250px;
   position: relative;
   z-index: 1;
@@ -226,13 +240,13 @@
 
 /* Right Side - Form Wrapper */
 .contact-form-side {
-  background: var(--color-white);
+  background: var(--color-card);
   padding: var(--space-3xl) var(--space-2xl);
   border-radius: var(--radius-2xl);
   box-shadow: 
-    0 20px 60px rgba(0, 0, 0, 0.08),
-    0 0 40px rgba(56, 178, 172, 0.05);
-  border: 1px solid rgba(30, 58, 95, 0.05);
+    var(--shadow-lg),
+    0 0 40px rgba(14, 165, 233, 0.05);
+  border: 1px solid rgba(37, 99, 235, 0.05);
 }
 
 .contact-form-wrapper h2 {
@@ -272,7 +286,7 @@
   width: 100%;
   padding: var(--space-sm) var(--space-md);
   border: 2px solid var(--color-border);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-xl);
   font-size: var(--font-size-base);
   font-family: inherit;
   transition: all var(--transition-fast) var(--easing-ease);
@@ -293,7 +307,7 @@
 .form-group textarea:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 4px rgba(30, 58, 95, 0.08), 0 0 20px rgba(30, 58, 95, 0.12);
+  box-shadow: var(--shadow-sm), 0 0 20px rgba(37, 99, 235, 0.15);
   transform: translateY(-1px);
 }
 
@@ -342,18 +356,18 @@
   background: linear-gradient(135deg, var(--color-whatsapp) 0%, var(--color-success-dark) 100%);
   color: var(--color-white);
   border: none;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-xl);
   font-weight: var(--font-weight-semibold);
   font-size: var(--font-size-base);
   cursor: pointer;
   transition: all var(--transition-fast) var(--easing-ease);
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-submit-whatsapp:hover {
   background: linear-gradient(135deg, var(--color-success-dark) 0%, var(--color-success) 100%);
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+  box-shadow: var(--shadow-lg);
 }
 
 /* Old sections - keep for Quick Contact buttons at bottom */

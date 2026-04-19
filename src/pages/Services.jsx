@@ -15,7 +15,7 @@ const Services = () => {
       <section className="services-banner">
         <div className="services-banner-container">
           <h1>Our Services</h1>
-          <p>Professional repair services for all major home appliances</p>
+          <p>Professional repair for all major home appliances</p>
         </div>
       </section>
 
@@ -135,7 +135,7 @@ const Services = () => {
       <section className="services-final-cta">
         <div className="services-final-cta-container">
           <h2>Need Professional Appliance Repair?</h2>
-          <p>Contact Shaghara AC Workshop today for reliable doorstep service in Sharjah.</p>
+          <p>Contact Shaghara AC Workshop for reliable on‑site appliance repair across Sharjah.</p>
           <CTAButtons variant="all" size="large" />
         </div>
       </section>

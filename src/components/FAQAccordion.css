@@ -8,25 +8,31 @@
 
 .faq-item {
   background-color: var(--color-white);
-  border-radius: var(--radius-lg);
-  margin-bottom: var(--space-lg);
+  border-radius: 12px; /* rounded-xl */
+  margin-bottom: var(--space-xl); /* increased gap */
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--color-border);
   overflow: hidden;
-  transition: all var(--transition-base) var(--easing-ease-out);
+  transition: background-color var(--transition-fast) var(--easing-ease-out), box-shadow var(--transition-fast);
 }
+
 
 .faq-item:hover {
   border-color: var(--color-accent);
   box-shadow: var(--shadow-md);
 }
 
+.faq-item.open {
+  background-color: #eff6ff; /* blue-50 */
+}
+
+
 .faq-question {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--space-lg) var(--space-xl);
+  padding: 1.25rem; /* padding-5 */
   background: none;
   border: none;
   cursor: pointer;
@@ -34,11 +40,12 @@
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-semibold);
   color: var(--color-text-primary);
-  transition: all var(--transition-fast) var(--easing-ease);
+  transition: background-color var(--transition-fast) var(--easing-ease), transform var(--transition-fast);
 }
 
+
 .faq-question:hover {
-  background-color: var(--color-light-bg);
+  background-color: rgba(15, 23, 42, 0.03);
 }
 
 .faq-question span {
@@ -46,24 +53,39 @@
   padding-right: var(--space-lg);
 }
 
-.faq-icon {
-  flex-shrink: 0;
-  transition: transform var(--transition-base) var(--easing-ease);
-  color: var(--color-accent);
-  width: 20px;
-  height: 20px;
+.faq-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
 }
 
-.faq-icon.open {
-  transform: rotate(180deg);
+.faq-toggle-icon {
+  color: var(--color-accent);
+  transition: transform var(--transition-fast) var(--easing-ease), opacity var(--transition-fast);
 }
+
+.faq-toggle-icon.open {
+  transform: rotate(180deg) scale(1.02);
+}
+
 
 .faq-answer {
-  padding: 0 var(--space-xl) var(--space-xl);
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 var(--space-xl) 0;
   color: var(--color-text-secondary);
   line-height: var(--line-height-relaxed);
-  animation: slideDown var(--transition-base) var(--easing-ease-out);
+  transition: max-height 320ms var(--easing-ease), opacity 220ms var(--easing-ease);
+  opacity: 0;
   border-top: 1px solid var(--color-border);
+}
+
+.faq-answer.open {
+  max-height: 600px; /* large enough to contain content */
+  padding: var(--space-md) var(--space-xl) var(--space-xl);
+  opacity: 1;
 }
 
 .faq-answer p {
@@ -75,15 +97,11 @@
   margin-bottom: 0;
 }
 
+
+/* keep the old animation name if used elsewhere */
 @keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* ===================================
@@ -104,6 +122,9 @@
   .faq-question {
     padding: var(--space-md) var(--space-lg);
     font-size: var(--font-size-sm);
+    /* larger tap targets */
+    padding-top: var(--space-lg);
+    padding-bottom: var(--space-lg);
   }
 
   .faq-answer {

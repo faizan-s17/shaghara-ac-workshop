@@ -29,6 +29,28 @@ a, button {
   }
 }
 
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -186,6 +208,11 @@ a, button {
   animation: fadeIn 0.6s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 }
 
+.animate-fadeInLeft {
+  opacity: 0;
+  animation: fadeInLeft 0.7s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
 .animate-scaleIn {
   opacity: 0;
   animation: scaleIn 0.5s cubic-bezier(0.33, 1, 0.68, 1) forwards;
@@ -287,6 +314,20 @@ a, button {
   transform: scale(0.98);
 }
 
+/* Subtle hover scale utility (opt-in) */
+.btn-hover-scale {
+  transition: transform 0.3s var(--easing-ease-out);
+}
+
+.btn-hover-scale:hover {
+  transform: scale(1.03);
+}
+
+/* Smooth transition utility (300ms) */
+.smooth-transition {
+  transition: all 0.3s var(--easing-ease-out) !important;
+}
+
 /* ===================================
    CARD HOVER EFFECTS
    =================================== */
@@ -315,6 +356,12 @@ a, button {
    TEXT REVEAL
    =================================== */
 .text-reveal-line {
+  opacity: 0;
+  animation: fadeInUp 0.7s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+/* Alias utility for fade-up reveal (works without JS if used directly) */
+.fade-up {
   opacity: 0;
   animation: fadeInUp 0.7s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 }

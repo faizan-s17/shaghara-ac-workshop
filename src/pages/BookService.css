@@ -109,7 +109,7 @@
 .form-group textarea {
   width: 100%;
   padding: var(--space-md);
-  border: 2px solid rgba(30, 58, 95, 0.1);
+  border: 2px solid rgba(37, 99, 235, 0.1);
   border-radius: var(--radius-md);
   font-size: var(--font-size-md);
   font-family: inherit;
@@ -122,7 +122,7 @@
 .form-group textarea:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
 .form-group input.error,
@@ -162,7 +162,7 @@
 }
 
 .btn-submit-whatsapp:hover {
-  background-color: #20ba5a;
+  background-color: var(--color-whatsapp);
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
 }
@@ -227,7 +227,7 @@
 }
 
 .btn-whatsapp-now:hover {
-  background-color: #20ba5a;
+  background-color: var(--color-whatsapp);
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
 }

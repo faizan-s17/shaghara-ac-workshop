@@ -10,15 +10,29 @@
    =================================== */
 .faq-banner {
   position: relative;
-  background: linear-gradient(135deg, rgba(30, 58, 95, 0.85) 0%, rgba(19, 41, 73, 0.85) 100%), url('/contact-bg-optimized.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 40%, #1e40af 70%, #2563eb 100%);
+  background-size: 300% 300%;
+  animation: faqGradient 10s ease infinite;
   color: white;
-  padding: var(--space-4xl) var(--container-padding) var(--space-3xl);
+  padding: var(--space-5xl) var(--container-padding) var(--space-4xl);
   margin-top: 80px;
   text-align: center;
   overflow: hidden;
+}
+
+.faq-banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/contact-bg-optimized.webp') center/cover no-repeat;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+@keyframes faqGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .faq-banner::before {
@@ -60,8 +74,8 @@
    FAQ ACCORDION SECTION
    =================================== */
 .faq-accordion-section {
-  background-color: var(--color-white);
-  padding: var(--space-5xl) var(--container-padding);
+  background: linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%);
+  padding: var(--space-4xl) var(--container-padding);
 }
 
 .faq-accordion-container {
@@ -123,7 +137,7 @@
 }
 
 .btn-whatsapp-help:hover {
-  background-color: #20ba5a;
+  background-color: var(--color-whatsapp);
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
 }

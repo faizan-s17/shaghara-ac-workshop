@@ -3,6 +3,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
+import StickyBar from './components/StickyBar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
@@ -29,6 +30,7 @@ function App() {
           </main>
           <Footer />
           <FloatingWhatsApp />
+          <StickyBar />
         </div>
       </Router>
     </HelmetProvider>

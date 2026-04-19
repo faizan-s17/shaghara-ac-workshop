@@ -23,9 +23,9 @@ const Footer = () => {
           <div className="footer-column">
             <h3>Shaghara AC Workshop</h3>
             <p>
-              Trusted home appliance repair and AC service in Abu Shagara, Sharjah.
-              With over 25 years of experience, we provide reliable door-to-door
-              repair services for all major home appliances.
+              Premier AC and appliance repair specialists in Abu Shagara, Sharjah.
+              Backed by 25+ years of practical experience, we deliver dependable,
+              on‑site repairs for major household appliances.
             </p>
           </div>
 

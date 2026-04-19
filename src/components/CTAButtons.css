@@ -3,14 +3,16 @@
    =================================== */
 .cta-buttons-group {
   display: flex;
-  gap: var(--space-lg);
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: column; /* mobile-first: stack */
+  gap: var(--space-md);
+  align-items: stretch;
   justify-content: center;
+  width: 100%;
 }
 
 .btn-cta {
   display: inline-flex;
+  width: 100%; /* full width mobile-first */
   align-items: center;
   justify-content: center;
   gap: var(--space-sm);
@@ -118,9 +120,18 @@
 /* ===================================
    RESPONSIVE DESIGN
    =================================== */
-@media (max-width: 768px) {
+/* Desktop layout: place buttons inline */
+@media (min-width: 768px) {
   .cta-buttons-group {
-    gap: var(--space-md);
+    flex-direction: row;
+    gap: var(--space-lg);
+    align-items: center;
+    justify-content: center;
+    width: auto;
+  }
+
+  .btn-cta {
+    width: auto;
   }
 
   .btn-medium {
@@ -130,17 +141,6 @@
 
   .btn-large {
     padding: var(--space-lg) var(--space-xl);
-    font-size: var(--font-size-base);
-  }
-}
-
-@media (max-width: 480px) {
-  .cta-buttons-group {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .btn-cta {
-    width: 100%;
+    font-size: var(--font-size-lg);
   }
 }

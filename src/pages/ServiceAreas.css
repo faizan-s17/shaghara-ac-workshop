@@ -5,6 +5,12 @@
   width: 100%;
 }
 
+/* Add breathing room around the section */
+.service-areas-page {
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-lg);
+}
+
 /* ===================================
    BANNER SECTION
    =================================== */
@@ -12,8 +18,8 @@
   position: relative;
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   color: white;
-  padding: var(--space-5xl) var(--space-3xl) var(--space-4xl);
-  margin-top: 80px;
+  padding: calc(var(--space-5xl) + 8px) var(--space-3xl) calc(var(--space-4xl) + 8px);
+  margin-top: 100px;
   text-align: center;
   overflow: hidden;
 }
@@ -30,11 +36,72 @@
   z-index: 0;
 }
 
+/* subtle map-like dotted illustration overlay */
+.areas-banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 15% 40%, rgba(255,255,255,0.06) 0 4px, transparent 5px),
+                    radial-gradient(circle at 50% 60%, rgba(255,255,255,0.06) 0 3px, transparent 4px),
+                    radial-gradient(circle at 80% 30%, rgba(255,255,255,0.06) 0 5px, transparent 6px);
+  z-index: 0;
+  pointer-events: none;
+}
+
 .areas-banner-container {
   max-width: 900px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
+}
+
+/* Location chips row */
+.location-chips {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.location-chip {
+  background: rgba(255,255,255,0.95);
+  color: var(--color-text-primary);
+  padding: 8px 14px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: var(--shadow-sm);
+  font-weight: var(--font-weight-medium);
+  border: none;
+  cursor: pointer;
+}
+
+.location-chip svg {
+  color: var(--color-primary);
+  width: 16px;
+  height: 16px;
+}
+
+/* Prominent View Service Areas button */
+.btn-view-areas {
+  display: inline-block;
+  margin-top: var(--space-xl);
+  padding: var(--space-md) var(--space-3xl);
+  background-color: var(--color-primary);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-lg);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-base);
+}
+
+.btn-view-areas:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
 }
 
 .areas-banner h1 {
@@ -83,6 +150,7 @@
 .main-areas-container {
   max-width: 1200px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .main-areas-container h2 {
@@ -105,7 +173,7 @@
   padding: var(--space-2xl);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
-  border: 1px solid rgba(30, 58, 95, 0.05);
+  border: 1px solid rgba(37, 99, 235, 0.05);
   transition: var(--transition-base);
   text-align: center;
 }
@@ -158,6 +226,7 @@
 .nearby-areas-container {
   max-width: 900px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .nearby-areas-container h2 {
@@ -257,14 +326,67 @@
    FINAL CTA SECTION
    =================================== */
 .areas-final-cta {
-  background-color: var(--color-white);
-  padding: var(--space-5xl) var(--container-padding);
+  background: linear-gradient(135deg, #0f172a 0%, #0b1220 100%);
+  color: white;
+  padding: calc(var(--space-5xl) + 12px) var(--container-padding);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.areas-final-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 10% 20%, rgba(255,255,255,0.02) 0 4px, transparent 5px),
+                    linear-gradient(45deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  mix-blend-mode: overlay;
+  pointer-events: none;
 }
 
 .areas-final-cta-container {
   max-width: 900px;
   margin: 0 auto;
+}
+
+.areas-final-cta-container h2 {
+  font-size: var(--font-size-4xl);
+  margin-bottom: var(--space-md);
+}
+
+.areas-final-subtext {
+  color: rgba(255,255,255,0.9);
+  margin-bottom: var(--space-lg);
+  font-size: var(--font-size-base);
+}
+
+.areas-final-cta-buttons {
+  display: flex;
+  gap: var(--space-lg);
+  justify-content: center;
+  align-items: center;
+}
+
+.areas-final-cta .btn-call {
+  background: transparent;
+  color: white;
+  border: 1.5px solid rgba(255,255,255,0.9);
+  box-shadow: none;
+}
+
+.areas-final-cta .btn-call:hover {
+  background: rgba(255,255,255,0.04);
+  transform: translateY(-2px);
+}
+
+.areas-final-cta .btn-whatsapp {
+  background-color: #25D366; /* WhatsApp green */
+  color: white;
+}
+
+.areas-final-cta .btn-whatsapp:hover {
+  background-color: #20b858;
+  transform: translateY(-2px);
 }
 
 .areas-final-cta-container h2 {
@@ -343,5 +465,18 @@
 
   .btn-check-availability {
     padding: var(--space-md) var(--space-lg);
+  }
+
+  .areas-final-cta-container h2 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .areas-final-cta-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .areas-final-cta .btn-cta {
+    width: 100%;
   }
 }

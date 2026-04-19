@@ -1,0 +1,51 @@
+.sticky-bar {
+  position: fixed;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.97), rgba(255,255,255,0.95));
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.16);
+  z-index: 1200;
+}
+
+.sticky-btn {
+  flex: 1 1 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #07102a;
+  text-decoration: none;
+  background: white;
+  border: 1px solid rgba(15,23,42,0.04);
+}
+
+.sticky-whatsapp img {
+  width: 18px;
+  height: 18px;
+}
+
+.sticky-call {
+  background: linear-gradient(90deg, rgba(37,99,235,0.06), rgba(14,165,233,0.04));
+}
+
+.sticky-book {
+  background: linear-gradient(90deg, rgba(8,145,178,0.06), rgba(14,165,233,0.04));
+}
+
+/* Hide on larger screens where footer/CTAs exist */
+@media (min-width: 769px) {
+  .sticky-bar {
+    display: none;
+  }
+}

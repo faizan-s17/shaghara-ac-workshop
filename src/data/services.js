@@ -2,7 +2,7 @@ export const services = [
   {
     id: 1,
     title: 'Split AC Repair & Service',
-    description: 'Expert repair and maintenance for split AC units. We fix cooling issues, water leakage, strange noises, and perform gas refills.',
+    description: 'Comprehensive repair and maintenance for split AC systems: cooling faults, leaks, noise issues, gas refill and preventive servicing.',
     image: '/assets/splitac.svg',
     icon: 'SplitAC',
     category: 'ac'
@@ -10,7 +10,7 @@ export const services = [
   {
     id: 2,
     title: 'Window AC Repair & Service',
-    description: 'Complete service for window AC units. Cooling problem diagnosis, cleaning, gas check, and all types of repairs.',
+    description: 'Full diagnostics and repair for window AC units, including cleaning, gas checks and component repairs.',
     image: '/assets/windowac.svg',
     icon: 'WindowAC',
     category: 'ac'
@@ -18,7 +18,7 @@ export const services = [
   {
     id: 3,
     title: 'Top Load Washing Machine Repair',
-    description: 'Professional repair for top load washing machines. Spinning issues, drainage problems, leakage, and electrical faults.',
+    description: 'Professional repairs for top‑load machines: spin faults, drainage, leaks and electrical issues.',
     image: '/assets/toploading.svg',
     icon: 'TopLoading',
     category: 'washing'
@@ -26,7 +26,7 @@ export const services = [
   {
     id: 4,
     title: 'Front Load Washing Machine Repair',
-    description: 'Expert service for front load washing machines. All major brands supported. Quick and reliable doorstep service.',
+    description: 'Dedicated service for front‑load machines with rapid, on‑site repairs across major brands.',
     image: '/assets/frontloading.svg',
     icon: 'FrontLoading',
     category: 'washing'
@@ -34,7 +34,7 @@ export const services = [
   {
     id: 5,
     title: 'Refrigerator Repair',
-    description: 'Repair services for all types of refrigerators. Not cooling, thermostat issues, leakage, strange sounds, and maintenance.',
+    description: 'Comprehensive refrigerator repair: cooling faults, thermostat issues, leaks and maintenance.',
     image: '/assets/refrigerator.svg',
     icon: 'Refrigerator',
     category: 'refrigerator'
@@ -42,7 +42,7 @@ export const services = [
   {
     id: 6,
     title: 'Water Dispenser Repair',
-    description: 'Water dispenser repair and servicing. No cooling, no heating, leakage, power issues, and general maintenance.',
+    description: 'Service and repair for water dispensers: heating/cooling faults, leaks and sanitisation.',
     image: '/assets/waterdispenser.svg',
     icon: 'WaterDispenser',
     category: 'dispenser'

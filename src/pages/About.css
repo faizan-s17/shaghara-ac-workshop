@@ -10,15 +10,29 @@
    =================================== */
 .about-banner {
   position: relative;
-  background: linear-gradient(135deg, rgba(30, 58, 95, 0.85) 0%, rgba(19, 41, 73, 0.85) 100%), url('/contact-bg-optimized.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 40%, #1e40af 70%, #2563eb 100%);
+  background-size: 300% 300%;
+  animation: aboutGradient 10s ease infinite;
   color: white;
-  padding: var(--space-4xl) var(--container-padding) var(--space-3xl);
+  padding: var(--space-5xl) var(--container-padding) var(--space-4xl);
   margin-top: 80px;
   text-align: center;
   overflow: hidden;
+}
+
+.about-banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/contact-bg-optimized.webp') center/cover no-repeat;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+@keyframes aboutGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .about-banner::before {
@@ -60,8 +74,9 @@
    INTRO SECTION
    =================================== */
 .about-intro-section {
-  background-color: var(--color-white);
+  background: linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%);
   padding: var(--space-4xl) var(--container-padding);
+  position: relative;
 }
 
 .about-intro-container {
@@ -89,13 +104,14 @@
    WHO WE ARE SECTION
    =================================== */
 .who-we-are-section {
-  background-color: var(--color-light-bg);
-  padding: var(--space-4xl) var(--container-padding);
+  background: linear-gradient(180deg, #f0f9ff 0%, #f8fafc 100%);
+  padding: var(--space-3xl) var(--container-padding);
 }
 
 .who-we-are-container {
   max-width: 900px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .content-block h2 {
@@ -117,8 +133,9 @@
    EXPERIENCE SECTION
    =================================== */
 .experience-section {
-  background-color: var(--color-white);
-  padding: var(--space-5xl) var(--container-padding);
+  background: linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%);
+  padding: var(--space-3xl) var(--container-padding);
+  position: relative;
 }
 
 .experience-container {
@@ -157,19 +174,35 @@
    EXPERTISE SECTION
    =================================== */
 .expertise-section {
-  background-color: var(--color-light-bg);
-  padding: var(--space-5xl) var(--container-padding);
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  padding: var(--space-4xl) var(--container-padding);
+  position: relative;
+  overflow: hidden;
+}
+
+.expertise-section::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -20%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
 }
 
 .expertise-container {
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .expertise-container h2 {
   font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-bold);
-  color: var(--color-primary);
+  color: #ffffff;
   text-align: center;
   margin-bottom: var(--space-md);
   letter-spacing: -0.5px;
@@ -177,7 +210,7 @@
 
 .expertise-container > p {
   font-size: var(--font-size-md);
-  color: var(--color-text-secondary);
+  color: rgba(203, 213, 225, 0.85);
   text-align: center;
   margin-bottom: var(--space-3xl);
   font-weight: var(--font-weight-normal);
@@ -190,11 +223,13 @@
 }
 
 .expertise-card {
-  background-color: var(--color-white);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   padding: var(--space-2xl);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  border: 1px solid rgba(30, 58, 95, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: var(--transition-base);
   will-change: transform, box-shadow;
   position: relative;
@@ -212,7 +247,7 @@
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(8, 145, 178, 0.05),
+    rgba(14, 165, 233, 0.05),
     transparent
   );
   transition: left 0.6s ease;
@@ -225,8 +260,9 @@
 
 .expertise-card:hover {
   transform: translateY(-8px);
-  box-shadow: var(--shadow-xl);
-  border-color: var(--color-accent);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+  border-color: rgba(56, 189, 248, 0.3);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .expertise-card svg {
@@ -239,8 +275,15 @@
 .expertise-card h3 {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
-  color: var(--color-primary);
+  color: #ffffff;
   margin-bottom: var(--space-md);
+}
+
+.expertise-card p {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  color: rgba(203, 213, 225, 0.85);
+  font-weight: var(--font-weight-normal);
 }
 
 .expertise-card p {
@@ -337,7 +380,7 @@
   padding: var(--space-2xl) var(--space-lg);
   background-color: var(--color-light-bg);
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(30, 58, 95, 0.05);
+  border: 1px solid rgba(37, 99, 235, 0.05);
   transition: var(--transition-base);
   will-change: transform, box-shadow;
 }
@@ -361,12 +404,12 @@
   color: white;
   font-size: 40px;
   transition: var(--transition-base);
-  box-shadow: 0 4px 12px rgba(30, 58, 95, 0.15);
+  box-shadow: var(--shadow-sm);
 }
 
 .value-card:hover .value-icon {
   transform: scale(1.1) rotate(-5deg);
-  box-shadow: 0 8px 20px rgba(30, 58, 95, 0.25);
+  box-shadow: var(--shadow-lg);
 }
 
 .value-card h3 {
@@ -424,7 +467,7 @@
   background-color: var(--color-white);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
-  border: 1px solid rgba(30, 58, 95, 0.05);
+  border: 1px solid rgba(37, 99, 235, 0.05);
   transition: var(--transition-base);
 }
 
@@ -492,7 +535,7 @@
   background-color: var(--color-light-bg);
   padding: var(--space-md);
   border-radius: var(--radius-md);
-  border: 1px solid rgba(30, 58, 95, 0.04);
+  border: 1px solid rgba(37, 99, 235, 0.04);
 }
 
 .area-item-compact h3 {
@@ -534,7 +577,7 @@
    =================================== */
 .about-cta-section {
   position: relative;
-  background: linear-gradient(135deg, rgba(30, 58, 95, 0.97) 0%, rgba(19, 41, 73, 0.95) 100%);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.97) 0%, rgba(30, 80, 192, 0.95) 100%);
   padding: var(--space-5xl) var(--container-padding);
   text-align: center;
   overflow: hidden;
@@ -561,7 +604,7 @@
   left: -5%;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(8, 145, 178, 0.12) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.12) 0%, transparent 70%);
   border-radius: 50%;
   z-index: 0;
   pointer-events: none;
@@ -717,4 +760,7 @@
     padding: var(--space-3xl) var(--container-padding);
   }
 }
+
+/* Legacy overrides removed to preserve original section paddings; layout now
+   controlled by `.about-section` and `.about-container` rules above. */
 

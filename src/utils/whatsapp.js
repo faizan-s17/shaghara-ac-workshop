@@ -26,7 +26,7 @@ export const sendToWhatsApp = (phoneNumber, message) => {
 export const formatBookingMessage = (formData) => {
   const { name, phone, location, appliance, problem, preferredTime } = formData;
   
-  let message = 'Hello, I want to book a service.\n\n';
+  let message = 'Hello, I would like to book a service.\n\n';
   message += `Name: ${name}\n`;
   message += `Phone: ${phone}\n`;
   message += `Location: ${location}\n`;

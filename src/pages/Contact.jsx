@@ -76,7 +76,7 @@ const Contact = () => {
       <section className="contact-banner">
         <div className="contact-banner-container">
           <h1>Contact Us</h1>
-          <p>Get in touch with us for reliable appliance repair service</p>
+          <p>Get in touch for professional on‑site appliance repair</p>
         </div>
       </section>
 
@@ -90,7 +90,7 @@ const Contact = () => {
             {/* Left Side - Contact Info & Map */}
             <div className="contact-info-side">
               <h2>Get in Touch</h2>
-              <p className="contact-intro-text">We're here to help! Reach out to us for reliable AC and home appliance repair services.</p>
+              <p className="contact-intro-text">For prompt, professional appliance repair, contact our team.</p>
               
               <div className="contact-cards-grid">
                 <div className="contact-info-card">
@@ -103,7 +103,7 @@ const Contact = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    WhatsApp: {BUSINESS_WHATSAPP}
+                    {BUSINESS_WHATSAPP}
                   </a>
                 </div>
 
@@ -124,7 +124,7 @@ const Contact = () => {
                     <Clock size={32} />
                   </div>
                   <h3>Working Hours</h3>
-                  <p>9:00 AM to 10:00 PM<br/>All Days</p>
+                  <p>9:00 AM – 10:00 PM<br/>Daily</p>
                 </div>
               </div>
             </div>
@@ -133,7 +133,7 @@ const Contact = () => {
             <div className="contact-form-side">
               <div className="contact-form-wrapper">
                 <h2>Send Us a Message</h2>
-                <p>Fill out the form below and we'll get back to you on WhatsApp.</p>
+                <p>Complete the form and we will reply via WhatsApp.</p>
 
                 <form onSubmit={handleSubmit} className="contact-form">
                   <div className="form-group">
@@ -238,7 +238,7 @@ const Contact = () => {
 
                   <button type="submit" className="btn-submit-whatsapp">
                     <img src="/assets/whatsappicon.svg" alt="WhatsApp" className="btn-icon-whatsapp" loading="lazy" />
-                    Send on WhatsApp
+                    Send via WhatsApp
                   </button>
                 </form>
               </div>

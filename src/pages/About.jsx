@@ -12,7 +12,7 @@ const About = () => {
       <section className="about-banner">
         <div className="about-banner-container">
           <h1>About Us</h1>
-          <p>Your trusted AC and home appliance repair experts in Sharjah</p>
+          <p>Premium AC and appliance repair specialists serving Sharjah</p>
         </div>
       </section>
 
@@ -21,9 +21,9 @@ const About = () => {
         <div className="about-intro-container">
           <h2>About Shaghara AC Workshop</h2>
           <p>
-            Shaghara AC Workshop is a trusted local AC and home appliance repair business 
-            based in Abu Shagara, Sharjah, UAE. We have been serving customers for more 
-            than 25 years with reliable repair, servicing, and maintenance solutions.
+            Shaghara AC Workshop delivers professional on‑site appliance and AC repair
+            services in Sharjah. With over 25 years of experience, we deliver reliable
+            technical solutions with a focus on quality and customer care.
           </p>
         </div>
       </section>
@@ -34,9 +34,9 @@ const About = () => {
           <div className="content-block">
             <h2>Who We Are</h2>
             <p>
-              Shaghara AC Workshop is a trusted local AC and home appliance repair business 
-              based in Abu Shagara, Sharjah, UAE. We have been serving customers for more 
-              than 25 years with reliable repair, servicing, and maintenance solutions.
+              A skilled team of technicians delivering dependable repairs, clear
+              guidance, and timely service. We prioritise lasting results and a
+              straightforward customer experience.
             </p>
           </div>
         </div>
@@ -49,14 +49,8 @@ const About = () => {
             <Award size={64} />
             <h2>Our Experience</h2>
             <p>
-              With over 25 years of hands-on experience, we have built a strong reputation 
-              for dependable service, technical expertise, and customer satisfaction. Our 
-              journey began with a simple mission: to provide honest and reliable appliance 
-              repair services to the community of Sharjah.
-            </p>
-            <p>
-              Over the decades, we have grown into a trusted name in home appliance repair, 
-              known for our professionalism, quick response times, and quality workmanship.
+              With over 25 years of service, we are recognised for dependable workmanship,
+              technical accuracy, and consistent customer satisfaction.
             </p>
           </div>
         </div>
@@ -67,30 +61,30 @@ const About = () => {
         <div className="expertise-container">
           <h2>Our Main Expertise</h2>
           <p>
-            Our primary specialty is split AC and window AC repair and servicing. We also 
-            provide repair services for washing machines, refrigerators, and water dispensers.
+            Specialised AC repair and comprehensive appliance servicing for homes and
+            businesses. We support washing machines, refrigerators, and water dispensers.
           </p>
           
           <div className="expertise-grid">
             <div className="expertise-card">
               <CheckCircle size={40} />
               <h3>AC Repair & Service</h3>
-              <p>Split AC and Window AC specialists with complete diagnostic and repair capabilities</p>
+              <p>Complete diagnostics and repair for split and window AC systems</p>
             </div>
             <div className="expertise-card">
               <CheckCircle size={40} />
               <h3>Washing Machines</h3>
-              <p>Expert repair for both top load and front load washing machines</p>
+              <p>Efficient repairs for top and front load machines</p>
             </div>
             <div className="expertise-card">
               <CheckCircle size={40} />
               <h3>Refrigerators</h3>
-              <p>Complete refrigerator repair services for all types and brands</p>
+              <p>Comprehensive refrigerator repair and maintenance</p>
             </div>
             <div className="expertise-card">
               <CheckCircle size={40} />
               <h3>Water Dispensers</h3>
-              <p>Fast and reliable water dispenser repair and maintenance</p>
+              <p>Reliable servicing and repairs for water dispensers</p>
             </div>
           </div>
         </div>
@@ -101,32 +95,30 @@ const About = () => {
         <div className="trust-reasons-container">
           <h2>Why Customers Trust Us</h2>
           <p>
-            Customers trust Shaghara AC Workshop for our experience, practical solutions, 
-            doorstep service, and commitment to honest work. We believe in building 
-            long-term relationships with our customers through transparency, quality 
-            service, and fair pricing.
+            Our reputation is built on expert workmanship, clear communication, and
+            reliable outcomes. We aim for long‑term value and transparent pricing.
           </p>
           
           <div className="trust-points">
             <div className="trust-point">
               <Users size={32} />
               <h3>Experienced Technicians</h3>
-              <p>Skilled professionals with proven expertise</p>
+              <p>Highly trained technicians with proven skills</p>
             </div>
             <div className="trust-point">
               <CheckCircle size={32} />
-              <h3>Doorstep Service</h3>
-              <p>Convenient home service at your preferred time</p>
+              <h3>On‑Site Service</h3>
+              <p>Convenient, scheduled service at your location</p>
             </div>
             <div className="trust-point">
               <Shield size={32} />
               <h3>Honest Work</h3>
-              <p>Transparent pricing and genuine advice</p>
+              <p>Clear estimates and practical recommendations</p>
             </div>
             <div className="trust-point">
               <Award size={32} />
               <h3>Quality Assurance</h3>
-              <p>Reliable repairs that last</p>
+              <p>Durable repairs backed by professional standards</p>
             </div>
           </div>
         </div>
@@ -136,7 +128,7 @@ const About = () => {
       <section className="about-service-areas">
         <div className="about-service-areas-container">
           <h2>Areas We Serve</h2>
-          <p>We provide doorstep repair service across all areas of Sharjah and Ajman.</p>
+          <p>On‑site appliance and AC repair services across Sharjah and Ajman.</p>
 
           <div className="areas-grid-compact">
             {serviceAreas.map((area, idx) => (
@@ -160,7 +152,7 @@ const About = () => {
       <section className="about-cta-section">
         <div className="about-cta-container">
           <h2>Ready to Experience Our Service?</h2>
-          <p>Contact us today for reliable AC and appliance repair in Sharjah.</p>
+          <p>Contact us to arrange professional on‑site appliance repair in Sharjah.</p>
           <CTAButtons variant="all" size="large" />
         </div>
       </section>

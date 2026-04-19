@@ -75,17 +75,16 @@ const BookService = () => {
       <section className="book-banner">
         <div className="book-banner-container">
           <h1>Book a Service</h1>
-          <p>Schedule your appliance repair service at your convenience</p>
+          <p>Schedule on‑site appliance repair at a time that suits you</p>
         </div>
       </section>
 
       {/* Intro Section */}
       <section className="book-intro-section">
         <div className="book-intro-container">
-          <p>
-            Fill out the form below and send your service request directly to us on WhatsApp. 
-            We'll respond quickly to confirm your appointment and arrange a technician visit 
-            at your preferred time.
+            <p>
+            Complete the form and submit your request via WhatsApp. We will quickly
+            confirm your appointment and arrange a technician visit at your preferred time.
           </p>
         </div>
       </section>
@@ -185,7 +184,7 @@ const BookService = () => {
 
             <button type="submit" className="btn-submit-whatsapp">
               <img src="/assets/whatsappicon.svg" alt="WhatsApp" className="btn-icon-whatsapp" loading="lazy" />
-              Send on WhatsApp
+              Send via WhatsApp
             </button>
           </form>
         </div>
@@ -199,17 +198,17 @@ const BookService = () => {
           <div className="quick-action-buttons">
             <a href="tel:+971507971172" className="btn-call-now">
               <Phone size={20} />
-              Call Now
+              Call Us
             </a>
-            
+
             <a 
-              href={`https://wa.me/${BUSINESS_WHATSAPP.replace('+', '')}?text=Hello,%20I%20want%20to%20book%20a%20service.`}
+              href={`https://wa.me/${BUSINESS_WHATSAPP.replace('+', '')}?text=Hello,%20I%20would%20like%20to%20book%20a%20service.`}
               target="_blank" 
               rel="noopener noreferrer"
               className="btn-whatsapp-now"
             >
               <img src="/assets/whatsappicon.svg" alt="WhatsApp" className="btn-icon-whatsapp" loading="lazy" />
-              WhatsApp Now
+              Message on WhatsApp
             </a>
           </div>
         </div>

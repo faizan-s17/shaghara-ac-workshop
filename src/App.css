@@ -1,38 +1,41 @@
 /* ===================================
+   PREMIUM DESIGN SYSTEM - FONT IMPORTS
+   =================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap');
+
+/* ===================================
    DESIGN SYSTEM - COLOR PALETTE
    =================================== */
 :root {
-  /* Primary Colors - Deep Navy for trust & professionalism */
-  --color-primary: #1e3a5f;
-  --color-primary-light: #2c5282;
-  --color-primary-dark: #132949;
-  --color-primary-gradient: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+  /* Primary Colors - Modern Blue - Premium & Trustworthy */
+  --color-primary: #2563EB;
+  --color-primary-light: #3B82F6;
+  --color-primary-dark: #1E40AF;
+  --color-primary-gradient: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%);
   
-  /* Secondary Colors - Cool grays & steel tones */
-  --color-secondary: #475569;
-  --color-secondary-light: #64748b;
+  /* Secondary Colors - Bright Secondary Blue */
+  --color-secondary: #0EA5E9;
+  --color-secondary-light: #38BDF8;
+  --color-secondary-gradient: linear-gradient(135deg, #0EA5E9 0%, #38BDF8 100%);
   
-  /* Accent Colors - Minimal, subtle */
-  --color-accent: #0891b2;
-  --color-accent-light: #06b6d4;
-  --color-accent-gradient: linear-gradient(135deg, #0891b2 0%, #06b6d4 100%);
+  /* Dark Color */
+  --color-dark: #0F172A;
   
-  /* Success/Green - for WhatsApp & positive actions */
+  /* Neutral Colors - Clean, premium grays */
+  --color-light-bg: #F8FAFC;
+  --color-lighter-bg: #F1F5F9;
+  --color-border: #E2E8F0;
+  --color-border-light: #CBD5E1;
+  --color-text-primary: #0F172A;
+  --color-text-secondary: #475569;
+  --color-text-light: #94A3B8;
+  --color-white: #FFFFFF;
+  --color-card: #FFFFFF;
+  
+  /* Semantic Colors */
   --color-success: #10b981;
   --color-success-dark: #059669;
   --color-whatsapp: #25d366;
-  
-  /* Neutral Colors - Clean, premium grays */
-  --color-light-bg: #f8fafc;
-  --color-lighter-bg: #f1f5f9;
-  --color-border: #e2e8f0;
-  --color-border-light: #cbd5e1;
-  --color-text-primary: #0f172a;
-  --color-text-secondary: #475569;
-  --color-text-light: #94a3b8;
-  --color-white: #ffffff;
-  
-  /* Semantic Colors */
   --color-error: #dc2626;
   --color-warning: #f59e0b;
   --color-info: #3b82f6;
@@ -40,9 +43,12 @@
   /* ===================================
      DESIGN SYSTEM - TYPOGRAPHY
      =================================== */
-  --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 
+  /* Font Families - Premium Professional */
+  --font-family-heading: 'Poppins', sans-serif;
+  --font-family-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 
     'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 
     sans-serif;
+  --font-family-base: var(--font-family-body);
   
   /* Font Sizes - Professional scale */
   --font-size-xs: 0.75rem;      /* 12px */
@@ -55,7 +61,7 @@
   --font-size-4xl: 2.25rem;     /* 36px */
   --font-size-5xl: 3rem;        /* 48px */
   
-  /* Font Weights */
+  /* Font Weights - Body: 400-500, Headings: 600-700 */
   --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
@@ -94,14 +100,14 @@
      DESIGN SYSTEM - SHADOWS
      =================================== */
   --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);     /* Default */
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1); /* Hover */
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
   --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   --shadow-elevation: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
-  --shadow-glow-primary: 0 0 40px rgba(30, 58, 95, 0.15);
-  --shadow-glow-accent: 0 0 40px rgba(8, 145, 178, 0.2);
+  --shadow-glow-primary: 0 0 40px rgba(37, 99, 235, 0.15);
+  --shadow-glow-secondary: 0 0 40px rgba(14, 165, 233, 0.2);
   
   /* ===================================
      DESIGN SYSTEM - BORDER RADIUS
@@ -109,8 +115,8 @@
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 12px;
-  --radius-xl: 16px;
-  --radius-2xl: 24px;
+  --radius-xl: 16px;       /* For buttons & inputs */
+  --radius-2xl: 24px;      /* For cards */
   --radius-full: 9999px;
   
   /* ===================================
@@ -143,14 +149,16 @@ html {
 }
 
 body {
-  font-family: var(--font-family-base);
+  font-family: var(--font-family-body);
   font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
   color: var(--color-text-primary);
   background-color: var(--color-white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden; /* prevent horizontal scroll */
 }
 
 .app {
@@ -266,8 +274,9 @@ ul, ol {
   box-shadow: var(--shadow-lg);
 }
 
-/* Heading Styles */
+/* Heading Styles - Using premium Poppins font */
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   color: var(--color-text-primary);
@@ -275,31 +284,39 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: var(--font-size-5xl);
+  font-weight: 700;
   letter-spacing: -0.02em;
 }
 
 h2 {
   font-size: var(--font-size-4xl);
+  font-weight: 700;
   letter-spacing: -0.015em;
 }
 
 h3 {
   font-size: var(--font-size-2xl);
+  font-weight: 600;
 }
 
 h4 {
   font-size: var(--font-size-xl);
+  font-weight: 600;
 }
 
 h5 {
   font-size: var(--font-size-lg);
+  font-weight: 600;
 }
 
 h6 {
   font-size: var(--font-size-base);
+  font-weight: 600;
 }
 
 p {
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-regular);
   color: var(--color-text-secondary);
   line-height: var(--line-height-relaxed);
 }
@@ -308,9 +325,9 @@ p {
    UTILITY CLASSES
    =================================== */
 .container {
-  max-width: var(--container-max-width);
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 var(--container-padding);
+  padding: 0 var(--space-lg);
   width: 100%;
 }
 
@@ -318,8 +335,16 @@ p {
   text-align: center;
 }
 
+/* Mobile-first: Section padding reduced to py-14 (56px) */
 .section {
-  padding: var(--section-padding-desktop);
+  padding: 56px var(--space-lg); /* py-14 */
+}
+
+/* Increase padding on larger viewports */
+@media (min-width: 769px) {
+  .section {
+    padding: 80px var(--space-lg);
+  }
 }
 
 .section-header {
@@ -342,6 +367,11 @@ p {
   background-color: var(--color-light-bg);
 }
 
+/* Standard gap for layouts: 24px */
+.gap-standard {
+  gap: 24px;
+}
+
 .page-padding-top {
   padding-top: 80px;
 }
@@ -352,13 +382,14 @@ p {
 
 /* Base Button */
 .btn {
-  display: inline-flex;
+  display: flex; /* mobile-first full-width */
+  width: 100%;
   align-items: center;
   justify-content: center;
   gap: var(--space-sm);
   border: none;
-  border-radius: var(--radius-md);
-  font-family: inherit;
+  border-radius: var(--radius-xl);
+  font-family: var(--font-family-heading);
   font-weight: var(--font-weight-semibold);
   font-size: var(--font-size-base);
   padding: var(--space-lg) var(--space-xl);
@@ -371,6 +402,15 @@ p {
   overflow: hidden;
   user-select: none;
   will-change: transform, box-shadow;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Desktop: restore inline buttons */
+@media (min-width: 768px) {
+  .btn {
+    display: inline-flex;
+    width: auto;
+  }
 }
 
 /* ===================================
@@ -492,41 +532,41 @@ p {
 .btn-primary {
   background-color: var(--color-primary);
   color: var(--color-white);
-  box-shadow: 0 4px 12px rgba(30, 58, 95, 0.2);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-primary:hover {
   background-color: var(--color-primary-dark);
-  box-shadow: 0 6px 20px rgba(30, 58, 95, 0.3);
+  box-shadow: var(--shadow-lg);
   transform: translateY(-2px);
 }
 
 .btn-primary:active {
   transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(30, 58, 95, 0.2);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-primary:focus {
-  outline: 2px solid var(--color-accent);
+  outline: 2px solid var(--color-secondary);
   outline-offset: 2px;
 }
 
-/* Secondary Button - Accent action */
+/* Secondary Button - Bright secondary blue */
 .btn-secondary {
-  background-color: var(--color-accent);
+  background-color: var(--color-secondary);
   color: var(--color-white);
-  box-shadow: 0 4px 12px rgba(8, 145, 178, 0.2);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-secondary:hover {
-  background-color: var(--color-accent-light);
-  box-shadow: 0 6px 20px rgba(8, 145, 178, 0.3);
+  background-color: var(--color-secondary-light);
+  box-shadow: var(--shadow-lg);
   transform: translateY(-2px);
 }
 
 .btn-secondary:active {
   transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(8, 145, 178, 0.2);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-secondary:focus {
@@ -545,12 +585,13 @@ p {
 .btn-outline:hover {
   background-color: var(--color-primary);
   color: var(--color-white);
-  box-shadow: 0 4px 12px rgba(30, 58, 95, 0.2);
+  box-shadow: var(--shadow-lg);
   transform: translateY(-2px);
 }
 
 .btn-outline:active {
   transform: translateY(0);
+  box-shadow: var(--shadow-sm);
 }
 
 /* Light Button - Subtle action */
@@ -558,35 +599,37 @@ p {
   background-color: var(--color-light-bg);
   color: var(--color-primary);
   border: 1px solid var(--color-border);
-  box-shadow: none;
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-light:hover {
   background-color: var(--color-lighter-bg);
-  border-color: var(--color-accent);
+  border-color: var(--color-secondary);
+  box-shadow: var(--shadow-lg);
   transform: translateY(-2px);
 }
 
 .btn-light:active {
   transform: translateY(0);
+  box-shadow: var(--shadow-sm);
 }
 
 /* Success Button - WhatsApp green */
 .btn-success {
   background-color: var(--color-whatsapp);
   color: var(--color-white);
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-success:hover {
   background-color: var(--color-success-dark);
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+  box-shadow: var(--shadow-lg);
   transform: translateY(-2px);
 }
 
 .btn-success:active {
   transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.2);
+  box-shadow: var(--shadow-sm);
 }
 
 /* Size Variations */
@@ -616,8 +659,8 @@ p {
    =================================== */
 
 .card {
-  background-color: var(--color-white);
-  border-radius: var(--radius-lg);
+  background-color: var(--color-card);
+  border-radius: var(--radius-2xl);
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-sm);
   transition: all var(--transition-base) var(--easing-ease-out);
@@ -627,7 +670,7 @@ p {
 
 .card:hover {
   border-color: var(--color-border-light);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
   transform: translateY(-2px);
 }
 
