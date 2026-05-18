@@ -1,7 +1,10 @@
-import { Phone } from 'lucide-react';
+import { Phone, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { BUSINESS_PHONE, BUSINESS_WHATSAPP, sendToWhatsApp } from '../utils/whatsapp';
 import './StickyBar.css';
+
+// Business location - Update with actual Google Maps link if available
+const GOOGLE_MAPS_URL = 'https://maps.google.com/maps?q=Abu+Shagara,+Sharjah';
 
 const StickyBar = () => {
   const callNow = () => {
@@ -9,7 +12,11 @@ const StickyBar = () => {
   };
 
   const openWhatsApp = () => {
-    sendToWhatsApp(BUSINESS_WHATSAPP, 'Hello, I need service.');
+    sendToWhatsApp(BUSINESS_WHATSAPP, 'Hi, my AC is not cooling. I am in Sharjah. Can you send a technician?');
+  };
+
+  const openDirections = () => {
+    window.open(GOOGLE_MAPS_URL, '_blank');
   };
 
   return (
@@ -24,9 +31,10 @@ const StickyBar = () => {
         <span>WhatsApp</span>
       </button>
 
-      <Link to="/contact" className="sticky-btn sticky-book" aria-label="Book service">
-        <span>Book</span>
-      </Link>
+      <button className="sticky-btn sticky-directions" onClick={openDirections} aria-label="View location">
+        <MapPin size={18} />
+        <span>Directions</span>
+      </button>
     </div>
   );
 };

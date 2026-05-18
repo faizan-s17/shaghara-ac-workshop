@@ -120,3 +120,52 @@ export const waterDispenserServices = [
   'Cleaning and sanitization',
   'Tank replacement'
 ];
+
+// Problem-Based Services for CRO (Conversion Rate Optimization) - Home Page
+export const problemBasedServices = [
+  {
+    id: 1,
+    title: 'AC Problems We Fix',
+    category: 'ac',
+    problems: [
+      'AC not cooling',
+      'Water leaking from indoor unit',
+      'Bad smell from AC',
+      'AC making noise',
+      'Gas refill / low cooling',
+      'AC stops after a few minutes'
+    ],
+    ctaText: 'WhatsApp for AC Repair',
+    whatsappMessage: 'Hi, I have an AC problem. Can you send a technician to Sharjah?'
+  },
+  {
+    id: 2,
+    title: 'Fridge Problems We Fix',
+    category: 'refrigerator',
+    problems: [
+      'Fridge not cooling',
+      'Freezer ice buildup',
+      'Water leakage',
+      'Compressor issue',
+      'Strange noise',
+      'Food spoiling quickly'
+    ],
+    ctaText: 'WhatsApp for Fridge Repair',
+    whatsappMessage: 'Hi, my fridge is not working properly. Can you help me in Sharjah?'
+  },
+  {
+    id: 3,
+    title: 'Washing Machine Problems We Fix',
+    category: 'washing',
+    problems: [
+      'Not spinning',
+      'Water not draining',
+      'Door locked',
+      'Shaking too much',
+      'Leakage',
+      'Motor or drum issue'
+    ],
+    ctaText: 'WhatsApp for Washer Repair',
+    whatsappMessage: 'Hi, my washing machine is having issues. Are you available in Sharjah?'
+  }
+];

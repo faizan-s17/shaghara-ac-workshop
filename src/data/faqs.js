@@ -1,47 +1,47 @@
 export const faqs = [
   {
     id: 1,
-    question: 'Do you provide home service?',
-    answer: 'Yes. We offer full on‑site appliance repair. A qualified technician will attend at your scheduled time to diagnose and resolve the issue.'
+    question: 'Do you repair ACs in Abu Shagara?',
+    answer: 'Yes, we provide AC repair support in Abu Shagara and nearby Sharjah areas. Call or WhatsApp us with your issue and we will arrange a technician visit.'
   },
   {
     id: 2,
-    question: 'What is your main specialty?',
-    answer: 'We specialise in split and window AC repair and servicing. With over 25 years of experience, we handle cooling faults, leaks, gas refills and preventive maintenance.'
+    question: 'Can I contact you on WhatsApp?',
+    answer: 'Yes, you can send your appliance problem on WhatsApp and we will guide you. Simply describe the issue and we will confirm service availability.'
   },
   {
     id: 3,
-    question: 'Which appliances do you repair?',
-    answer: 'We service major household appliances including:\n• Split and window AC units\n• Top‑load and front‑load washing machines\n• Refrigerators\n• Water dispensers'
+    question: 'What appliances do you repair?',
+    answer: 'We repair ACs (split and window), fridges, washing machines (top and front load), dishwashers and other home appliances.'
   },
   {
     id: 4,
-    question: 'Are you located in Sharjah?',
-    answer: 'Yes. Our workshop is based in Abu Shagara, Sharjah. We provide on‑site service across Sharjah and Ajman.'
+    question: 'Do you provide same-day service?',
+    answer: 'Same-day visits may be available depending on technician availability and your location in Sharjah. Message us on WhatsApp for the quickest response.'
   },
   {
     id: 5,
-    question: 'How many years of experience do you have?',
-    answer: 'We bring over 25 years of hands‑on experience. Our technicians are trained to diagnose and repair a wide range of appliance issues.'
+    question: 'Can I get an estimate before repair?',
+    answer: 'You can message us the appliance issue on WhatsApp with photos if possible, and we will guide you before sending a technician.'
   },
   {
     id: 6,
     question: 'How can I contact you?',
-    answer: 'Contact us by phone, WhatsApp or via the contact form. For urgent needs, phone or WhatsApp provides the fastest response.'
+    answer: 'You can reach us via WhatsApp, phone call, or the contact form on our website. For urgent needs, WhatsApp or phone provides the fastest response.'
   },
   {
     id: 7,
-    question: 'Can I book service through WhatsApp?',
-    answer: 'Yes. Send your name, contact number, location, appliance type and a brief description of the issue. We will confirm your booking and arrange a technician visit.'
+    question: 'Do you repair refrigerators and washing machines?',
+    answer: 'Yes, we repair fridges, freezers, washing machines and other home appliances. Send us a message describing the problem and we will help.'
   },
   {
     id: 8,
-    question: 'Do you repair both split and window AC?',
-    answer: 'Yes. We service both split and window AC units across brands, offering repairs, maintenance, gas refills and cleaning.'
+    question: 'My AC is not cooling. What should I do?',
+    answer: 'WhatsApp us immediately with your location and we will check availability. Common issues like low cooling, water leaks, and noise are quickly diagnosed and fixed.'
   },
   {
     id: 9,
     question: 'What are your working hours?',
-    answer: 'Working hours: 9:00 AM – 10:00 PM. For urgent matters, contact us on WhatsApp and we will respond promptly.'
+    answer: 'We are available 9:00 AM – 10:00 PM daily. For urgent matters outside these hours, message us on WhatsApp and we will respond as soon as possible.'
   }
 ];

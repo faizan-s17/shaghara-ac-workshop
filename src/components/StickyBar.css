@@ -39,8 +39,12 @@
   background: linear-gradient(90deg, rgba(37,99,235,0.06), rgba(14,165,233,0.04));
 }
 
-.sticky-book {
-  background: linear-gradient(90deg, rgba(8,145,178,0.06), rgba(14,165,233,0.04));
+.sticky-whatsapp {
+  background: linear-gradient(90deg, rgba(37,211,102,0.06), rgba(34,197,94,0.04));
+}
+
+.sticky-directions {
+  background: linear-gradient(90deg, rgba(168,85,247,0.06), rgba(139,92,246,0.04));
 }
 
 /* Hide on larger screens where footer/CTAs exist */

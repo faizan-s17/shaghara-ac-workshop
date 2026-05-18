@@ -1,79 +1,102 @@
 import { Link } from 'react-router-dom';
-import { CheckCircle, MapPin, Clock, Award, Users, Zap } from 'lucide-react';
-import ServiceCard from '../components/ServiceCard';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, MapPin, Clock, Award, Users, Zap, AlertCircle } from 'lucide-react';
+import ProblemServiceCard from '../components/ProblemServiceCard';
 import FAQAccordion from '../components/FAQAccordion';
 import CTAButtons from '../components/CTAButtons';
 import FloatingElements from '../components/FloatingElements';
-import { services } from '../data/services';
+import { problemBasedServices } from '../data/services';
 import { faqs } from '../data/faqs';
-import { serviceAreas } from '../data/areas';
+import { serviceAreaChips, serviceAreasDescription } from '../data/areas';
+import { BUSINESS_WHATSAPP, sendToWhatsApp } from '../utils/whatsapp';
 import './Home.css';
 
 const Home = () => {
-  
+  const handleAvailabilityWhatsApp = () => {
+    sendToWhatsApp(BUSINESS_WHATSAPP, 'Hi, I need appliance repair in Sharjah. Can you help today?');
+  };
+
+  const handleAreaCheckWhatsApp = () => {
+    sendToWhatsApp(BUSINESS_WHATSAPP, serviceAreasDescription.ctaMessage);
+  };
+
+  const handleFinalCTA = () => {
+    sendToWhatsApp(BUSINESS_WHATSAPP, 'Hi, I need AC, fridge or washing machine repair in Sharjah. Are you available?');
+  };
 
   return (
     <div className="home">
-      {/* Section 1: Hero Section */}
-      <section className="hero-section">
-        {/* Radial Light Overlay */}
+      <Helmet>
+        <title>AC Repair in Abu Shagara Sharjah | Shaghara AC Workshop</title>
+        <meta name="description" content="Fast AC, fridge, washing machine and home appliance repair service in Abu Shagara, Sharjah. Call or WhatsApp Shaghara AC Workshop for quick repair support." />
+        <meta name="keywords" content="AC repair Abu Shagara, AC repair Sharjah, fridge repair Sharjah, washing machine repair Sharjah, home appliance repair Sharjah, AC not cooling Sharjah" />
+        <meta property="og:title" content="AC Repair in Abu Shagara Sharjah | Shaghara AC Workshop" />
+        <meta property="og:description" content="Fast AC, fridge, washing machine and home appliance repair service in Abu Shagara, Sharjah. Get same-day service." />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://shaghara-ac-workshop.vercel.app/" />
+        <meta name="robots" content="index, follow" />
+        <meta name="theme-color" content="#2563eb" />
+      </Helmet>
+      
+      {/* Section 1: Hero Section - Emergency Focused */}
+      <section className="hero-section hero-section-cro">
         <div className="hero-radial-overlay" aria-hidden="true"></div>
         
-        <div className="hero-container">
-          {/* Floating Decorative Elements */}
+        <div className="hero-container hero-container-cro">
           <FloatingElements variant="hero" />
           
-          <div className="hero-content">
-            {/* Premium Label */}
-            <div className="hero-label animate-fadeInDown">
-              <span>✓</span>
-              <span>Premier AC & Appliance Care — Sharjah</span>
+          <div className="hero-content hero-content-cro">
+            {/* Emergency Label */}
+            <div className="hero-label hero-label-urgent animate-fadeInDown">
+              <span>⚡</span>
+              <span>Fast Emergency Repair Service</span>
             </div>
 
-            {/* Main Heading */}
-            <h1 className="hero-title animate-hero-reveal">
-              Expert AC & Home Appliance Repair
+            {/* Main Heading - Problem-Focused */}
+            <h1 className="hero-title hero-title-cro animate-hero-reveal">
+              AC Not Cooling in Abu Shagara? Get Same-Day Repair in Sharjah
             </h1>
 
-            {/* Subtitle */}
-            <p className="hero-subtitle animate-fadeInUp delay-200">
-              On‑site service in Abu Shagara. 25+ years of proven expertise.
-              Fast repairs for major appliances and AC systems.
+            {/* Supporting Text - Local and Conversion Focused */}
+            <p className="hero-subtitle hero-subtitle-cro animate-fadeInUp delay-200">
+              Local AC, fridge, washing machine and home appliance repair service in Abu Shagara, Sharjah. Call or WhatsApp now and get quick help from a technician.
             </p>
 
-            {/* CTA Buttons */}
-            <div className="hero-cta-section animate-fadeInUp delay-300">
-              <div className="hero-cta-buttons">
-                <Link to="/contact" className="btn-hero-primary btn-hover-lift btn-press">
-                  Schedule Service
-                </Link>
-                <a 
-                  href="https://wa.me/971507971172?text=Hello,%20I%20have%20an%20inquiry." 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="btn-hero-secondary btn-hover-lift btn-press"
+            {/* Primary CTAs - WhatsApp First */}
+            <div className="hero-cta-section hero-cta-section-cro animate-fadeInUp delay-300">
+              <div className="hero-cta-buttons hero-cta-buttons-cro">
+                <button
+                  onClick={() => sendToWhatsApp(BUSINESS_WHATSAPP, 'Hi, my AC is not cooling. I am in Sharjah. Can you send a technician?')}
+                  className="btn-hero-primary btn-hover-lift btn-press btn-whatsapp-large"
                 >
-                  Message on WhatsApp
-                </a>
-                <a href="tel:+971507971172" className="btn-hero-tertiary btn-hover-lift btn-press">
-                  Call Us
+                  💬 WhatsApp Technician Now
+                </button>
+                <a 
+                  href="tel:+971507971172" 
+                  className="btn-hero-secondary btn-hover-lift btn-press btn-call-large"
+                >
+                  📱 Call Now
                 </a>
               </div>
             </div>
 
-            {/* Trust Badges */}
-            <div className="hero-trust-badges animate-fadeInUp delay-400">
-              <div className="trust-badge">
-                <span className="badge-icon">⭐</span>
-                <span>25+ Years Experience</span>
+            {/* Trust Badges - Problem & Solution Focused */}
+            <div className="hero-trust-badges hero-trust-badges-cro animate-fadeInUp delay-400">
+              <div className="trust-badge trust-badge-cro">
+                <span className="badge-icon">📍</span>
+                <span>Abu Shagara, Sharjah</span>
               </div>
-              <div className="trust-badge">
+              <div className="trust-badge trust-badge-cro">
                 <span className="badge-icon">⚡</span>
-                <span>Rapid Response</span>
+                <span>Same-Day Visit Available</span>
               </div>
-              <div className="trust-badge">
-                <span className="badge-icon">✓</span>
-                <span>Certified Technicians</span>
+              <div className="trust-badge trust-badge-cro">
+                <span className="badge-icon">💬</span>
+                <span>WhatsApp Support</span>
+              </div>
+              <div className="trust-badge trust-badge-cro">
+                <span className="badge-icon">🛠</span>
+                <span>AC, Fridge & Washer Repair</span>
               </div>
             </div>
           </div>
@@ -81,14 +104,13 @@ const Home = () => {
           {/* Hero Image Section */}
           <div className="hero-image animate-scaleIn delay-200">
             <div className="hero-image-card parallax-subtle">
-              <img src="/landingpage.webp" alt="Professional HVAC & Appliance Repair Service" className="hero-landing-image" loading="lazy" />
+              <img src="/landingpage.webp" alt="Professional AC repair technician in Abu Shagara, Sharjah" className="hero-landing-image" loading="lazy" />
               <div className="hero-image-overlay" aria-hidden="true"></div>
               
-              {/* Floating Emergency Badge */}
               <div className="hero-floating-badge">
                 <div className="badge-content">
                   <div className="badge-dot"></div>
-                  <span>24/7 Emergency<br/>Service Available</span>
+                  <span>Same-Day<br/>Service Available</span>
                 </div>
               </div>
             </div>
@@ -96,63 +118,64 @@ const Home = () => {
         </div>
       </section>
 
-      
-
-      {/* Section 3: About Preview */}
-      <section className="about-preview-section">
-        <div className="about-preview-container">
-          {/* Floating Decorative Elements */}
+      {/* Section 2: Today's Availability - Urgency Box */}
+      <section className="availability-section availability-urgency">
+        <div className="availability-container">
           <FloatingElements variant="section" />
           
-          <div className="about-preview-content">
-            {/* Left Column - Text */}
-            <div className="about-text-column animate-fadeInLeft">
-              <h2>Welcome to Shaghara AC Workshop</h2>
-              <div className="about-divider"></div>
-              <p>
-                Shaghara AC Workshop delivers professional on‑site repair and maintenance for
-                household appliances. Based in Abu Shagara, we combine technical skill with
-                dependable service backed by over 25 years' experience.
-              </p>
-              <Link to="/about" className="btn-read-more-text btn-hover-lift btn-press">
-                Read More <span className="arrow">→</span>
-              </Link>
+          <div className="availability-card availability-card-urgent">
+            <div className="availability-header">
+              <AlertCircle size={32} className="availability-icon" />
+              <h2>Technicians Available Today</h2>
             </div>
 
-            {/* Right Column - Real Image */}
-            <div className="about-image-column animate-scaleIn delay-200">
-              <div className="about-image-wrapper">
-                <img src="/landingpage.webp" alt="Professional AC repair technician at work" className="about-real-image" loading="lazy" />
-                <div className="about-image-badge">
-                  <span className="badge-number">25+</span>
-                  <span className="badge-text">Years of<br/>Excellence</span>
-                </div>
+            <div className="availability-list">
+              <div className="availability-item">
+                <span className="availability-check">✓</span>
+                <span>AC not cooling, gas refill, water leakage and noise issues</span>
+              </div>
+              <div className="availability-item">
+                <span className="availability-check">✓</span>
+                <span>Fridge and freezer cooling problems</span>
+              </div>
+              <div className="availability-item">
+                <span className="availability-check">✓</span>
+                <span>Washing machine drainage, spinning and leakage problems</span>
+              </div>
+              <div className="availability-item">
+                <span className="availability-check">✓</span>
+                <span>Quick service in Abu Shagara and nearby Sharjah areas</span>
               </div>
             </div>
+
+            <button 
+              onClick={handleAvailabilityWhatsApp}
+              className="btn-availability-cta btn-hover-lift btn-press"
+            >
+              Send Your Problem on WhatsApp
+            </button>
           </div>
         </div>
       </section>
 
-      {/* Section 4: Services Overview */}
-      <section className="services-section">
-        <div className="services-container">
-          {/* Floating Decorative Elements */}
+      {/* Section 3: Problem-Based Services */}
+      <section className="problem-services-section">
+        <div className="problem-services-container">
           <FloatingElements variant="section" />
           
-            <div className="section-header animate-fadeInUp">
-            <h2>Our Services</h2>
-            <p>Comprehensive repair and maintenance for all major home appliances</p>
+          <div className="section-header section-header-cro animate-fadeInUp">
+            <h2>What Problems Do We Solve?</h2>
+            <p>Select your appliance issue and we'll send a technician to fix it</p>
           </div>
           
-          <div className="services-grid animate-stagger">
-            {services.map((service, index) => (
-              <ServiceCard 
+          <div className="problem-services-grid animate-stagger">
+            {problemBasedServices.map((service, index) => (
+              <ProblemServiceCard 
                 key={service.id}
                 title={service.title}
-                description={service.description}
-                image={service.image}
-                icon={service.icon}
-                className={`animate-card-entrance`}
+                problems={service.problems}
+                ctaText={service.ctaText}
+                whatsappMessage={service.whatsappMessage}
                 style={{ animationDelay: `${index * 0.1}s` }}
               />
             ))}
@@ -160,95 +183,129 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Section 5: Why Choose Us */}
-      <section className="why-choose-section">
+      {/* Section 4: Why Choose Shaghara - Local Trust Focused */}
+      <section className="why-choose-section why-choose-local">
         <div className="why-choose-container">
-          <h2 className="animate-fadeInUp">Why Customers Choose Us</h2>
+          <h2 className="animate-fadeInUp">Why Customers in Sharjah Call Shaghara AC Workshop</h2>
           
-          <div className="why-choose-grid animate-stagger-fast">
-            <div className="choose-item card-hover-lift animate-item-reveal" style={{ animationDelay: '0.1s' }}>
-              <div className="choose-icon">
-                <Award size={36} />
+          <div className="why-choose-grid why-choose-grid-large animate-stagger-fast">
+            <div className="choose-item choose-item-trust card-hover-lift animate-item-reveal" style={{ animationDelay: '0.1s' }}>
+              <div className="choose-icon choose-icon-large">
+                <MapPin size={40} />
               </div>
-              <h3>25+ Years Experience</h3>
-              <p>Decades of hands‑on expertise in AC and appliance repair</p>
+              <h3>Local Abu Shagara Workshop</h3>
+              <p>We are based in Abu Shagara, Sharjah, so customers nearby can reach us quickly.</p>
             </div>
-            <div className="choose-item card-hover-lift animate-item-reveal" style={{ animationDelay: '0.2s' }}>
-              <div className="choose-icon">
-                <MapPin size={36} />
+            <div className="choose-item choose-item-trust card-hover-lift animate-item-reveal" style={{ animationDelay: '0.2s' }}>
+              <div className="choose-icon choose-icon-large">
+                <Zap size={40} />
               </div>
-              <h3>On‑Site Service</h3>
-              <p>Professional repairs performed at your home, on your schedule</p>
+              <h3>Fast Help for Urgent Repairs</h3>
+              <p>AC not cooling, fridge stopped working, or washer leaking? Message us and explain the issue.</p>
             </div>
-            <div className="choose-item card-hover-lift animate-item-reveal" style={{ animationDelay: '0.3s' }}>
-              <div className="choose-icon">
-                <CheckCircle size={36} />
+            <div className="choose-item choose-item-trust card-hover-lift animate-item-reveal" style={{ animationDelay: '0.3s' }}>
+              <div className="choose-icon choose-icon-large">
+                <CheckCircle size={40} />
               </div>
-              <h3>AC Specialists</h3>
-              <p>Certified technicians focused on precise, lasting repairs</p>
+              <h3>Clear Repair Advice</h3>
+              <p>We check the problem properly and explain what needs fixing before repair.</p>
             </div>
-            <div className="choose-item card-hover-lift animate-item-reveal" style={{ animationDelay: '0.4s' }}>
-              <div className="choose-icon">
-                <Users size={36} />
+            <div className="choose-item choose-item-trust card-hover-lift animate-item-reveal" style={{ animationDelay: '0.4s' }}>
+              <div className="choose-icon choose-icon-large">
+                <Users size={40} />
               </div>
-              <h3>Reliable & Honest</h3>
-              <p>Transparent pricing and service you can trust</p>
-            </div>
-            <div className="choose-item card-hover-lift animate-item-reveal" style={{ animationDelay: '0.5s' }}>
-              <div className="choose-icon">
-                <MapPin size={36} />
-              </div>
-              <h3>Local in Abu Shagara</h3>
-              <p>A community-focused workshop serving Sharjah with integrity</p>
-            </div>
-            <div className="choose-item card-hover-lift animate-item-reveal" style={{ animationDelay: '0.6s' }}>
-              <div className="choose-icon">
-                <Zap size={36} />
-              </div>
-              <h3>Multiple Appliances</h3>
-              <p>Complete repair support for ACs, washers, fridges, and water dispensers</p>
+              <h3>Multiple Appliance Services</h3>
+              <p>AC, fridge, washing machine, dishwasher and other home appliance repair support.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 6: AC Specialty Section */}
-      {/* AC Specialty section removed to streamline homepage */}
+      {/* Section 5: Don't Call Us If - Trust Building */}
+      <section className="trust-section trust-section-bold">
+        <div className="trust-container trust-container-bold">
+          <div className="trust-card trust-card-bold">
+            <h2 className="trust-heading">Don't Call Us If You Want Guesswork</h2>
+            
+            <p className="trust-description">
+              We do not believe in random part changing or confusing repair talk. We check the appliance properly, explain the issue clearly, and repair only what needs fixing.
+            </p>
 
-      {/* Section 7: Service Areas Preview */}
-      <section className="service-areas-preview-section">
-        <div className="service-areas-preview-container">
-          <h2 className="animate-fadeInUp">Areas We Serve</h2>
-          <p className="animate-fadeInUp delay-100">On‑site appliance and AC repair across Sharjah and Ajman.</p>
+            <div className="trust-divider"></div>
+
+            <p className="trust-callout">
+              <strong>Call us if you want straight repair advice and quick help in Sharjah.</strong>
+            </p>
+
+            <button 
+              onClick={() => sendToWhatsApp(BUSINESS_WHATSAPP, 'Hi, I need honest repair advice for my appliance. Can we talk?')}
+              className="btn-trust-cta btn-hover-lift btn-press"
+            >
+              Talk to a Technician
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 6: Service Areas */}
+      <section className="service-areas-section service-areas-cro">
+        <div className="service-areas-container">
+          <FloatingElements variant="section" />
           
-          <div className="areas-tags animate-stagger-fast">
-            {serviceAreas.slice(0, 5).map((area, index) => (
-              <span key={index} className="area-tag animate-item-reveal" style={{ animationDelay: `${index * 0.08}s` }}>{area.name}</span>
+          <h2 className="animate-fadeInUp">Areas We Serve in Sharjah</h2>
+          <p className="animate-fadeInUp delay-100">{serviceAreasDescription.text}</p>
+          
+          <div className="areas-chips animate-stagger-fast">
+            {serviceAreaChips.map((area, index) => (
+              <span 
+                key={index} 
+                className="area-chip animate-item-reveal" 
+                style={{ animationDelay: `${index * 0.08}s` }}
+              >
+                {area}
+              </span>
             ))}
           </div>
           
-          <Link to="/about" className="btn-view-areas btn-hover-lift btn-press animate-fadeInUp delay-300">View Service Areas</Link>
+          <button 
+            onClick={handleAreaCheckWhatsApp}
+            className="btn-area-check btn-hover-lift btn-press animate-fadeInUp delay-300"
+          >
+            Check Availability in Your Area
+          </button>
         </div>
       </section>
 
-      {/* Section 8: FAQ Preview */}
-      <section className="faq-preview-section">
-        <div className="faq-preview-container">
+      {/* Section 7: FAQ */}
+      <section className="faq-section faq-section-cro">
+        <div className="faq-container">
           <h2 className="animate-fadeInUp">Frequently Asked Questions</h2>
-          <FAQAccordion faqs={faqs.slice(0, 4)} />
-          <Link to="/faq" className="btn-view-faq btn-hover-lift btn-press animate-fadeInUp delay-200">View All FAQs</Link>
+          <FAQAccordion faqs={faqs.slice(0, 5)} />
         </div>
       </section>
 
-      {/* Section 9: Final CTA */}
-      <section className="final-cta-section animate-fadeInUp">
-        <div className="final-cta-container">
-          {/* Floating Decorative Elements */}
+      {/* Section 8: Final Strong CTA */}
+      <section className="final-cta-section final-cta-section-bold animate-fadeInUp">
+        <div className="final-cta-container final-cta-bold">
           <FloatingElements variant="minimal" />
           
-          <h2>Need On‑site Repair?</h2>
-          <p>Contact Shaghara AC Workshop for prompt, professional service across Sharjah.</p>
-          <CTAButtons variant="all" size="large" />
+          <h2>Need Appliance Repair in Sharjah Today?</h2>
+          <p>Send your AC, fridge or washing machine problem on WhatsApp and get quick repair guidance from Shaghara AC Workshop.</p>
+          
+          <div className="final-cta-buttons">
+            <button 
+              onClick={handleFinalCTA}
+              className="btn-final-primary btn-hover-lift btn-press"
+            >
+              💬 WhatsApp Now
+            </button>
+            <a 
+              href="tel:+971507971172"
+              className="btn-final-secondary btn-hover-lift btn-press"
+            >
+              📱 Call Now
+            </a>
+          </div>
         </div>
       </section>
     </div>
