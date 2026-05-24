@@ -12,11 +12,13 @@
   background-size: 300% 300%;
   animation: contactGradient 10s ease infinite;
   color: var(--color-white);
-  padding: var(--space-5xl) var(--container-padding) var(--space-4xl);
+  padding: var(--space-3xl) var(--container-padding) var(--space-2xl);
   margin-top: 80px;
-  text-align: center;
+  text-align: left;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 .contact-banner::after {
@@ -48,23 +50,24 @@
 
 .contact-banner-container {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0;
   position: relative;
   z-index: 1;
 }
 
 .contact-banner h1 {
-  font-size: var(--font-size-5xl);
+  font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-bold);
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
   letter-spacing: -0.02em;
   color: #ffffff !important;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
 .contact-banner p {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-md);
   color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 0;
 }
 
 /* CONTACT DETAILS SECTION - PREMIUM SPLIT LAYOUT */
@@ -488,12 +491,12 @@
 
 @media (max-width: 768px) {
   .contact-banner {
-    padding: var(--space-3xl) var(--container-padding) var(--space-2xl);
+    padding: var(--space-2xl) var(--container-padding) var(--space-xl);
     margin-top: 70px;
   }
 
   .contact-banner h1 {
-    font-size: var(--font-size-3xl);
+    font-size: var(--font-size-2xl);
   }
   
   .contact-split-layout {
@@ -536,11 +539,11 @@
 
 @media (max-width: 480px) {
   .contact-banner {
-    padding: var(--space-2xl) var(--container-padding);
+    padding: var(--space-xl) var(--container-padding);
   }
 
   .contact-banner h1 {
-    font-size: var(--font-size-2xl);
+    font-size: var(--font-size-xl);
   }
   
   .contact-details-section,
