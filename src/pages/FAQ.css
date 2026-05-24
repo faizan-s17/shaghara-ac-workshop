@@ -14,10 +14,12 @@
   background-size: 300% 300%;
   animation: faqGradient 10s ease infinite;
   color: white;
-  padding: var(--space-5xl) var(--container-padding) var(--space-4xl);
+  padding: var(--space-3xl) var(--container-padding) var(--space-2xl);
   margin-top: 80px;
-  text-align: center;
+  text-align: left;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 .faq-banner::after {
@@ -49,25 +51,26 @@
 
 .faq-banner-container {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0;
   position: relative;
   z-index: 1;
 }
 
 .faq-banner h1 {
-  font-size: var(--font-size-4xl);
+  font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-bold);
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
   letter-spacing: -0.5px;
   color: #ffffff !important;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
 .faq-banner p {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-md);
   line-height: var(--line-height-relaxed);
   color: rgba(255, 255, 255, 0.85);
   font-weight: var(--font-weight-normal);
+  margin-bottom: 0;
 }
 
 /* ===================================
@@ -186,12 +189,12 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .faq-banner {
-    padding: var(--space-3xl) var(--container-padding) var(--space-2xl);
+    padding: var(--space-2xl) var(--container-padding) var(--space-xl);
     margin-top: 70px;
   }
 
   .faq-banner h1 {
-    font-size: var(--font-size-3xl);
+    font-size: var(--font-size-2xl);
   }
 
   .faq-help-container h2,
@@ -214,11 +217,11 @@
 
 @media (max-width: 480px) {
   .faq-banner {
-    padding: var(--space-2xl) var(--container-padding);
+    padding: var(--space-xl) var(--container-padding);
   }
 
   .faq-banner h1 {
-    font-size: var(--font-size-2xl);
+    font-size: var(--font-size-xl);
   }
 
   .faq-accordion-section,
